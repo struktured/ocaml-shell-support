@@ -1,0 +1,13 @@
+# OASIS_START
+# DO NOT EDIT (digest: 39bc3d627811a40cfddbce04a7b623e3)
+version = "0.1"
+description = "Ocaml scripts, for YJ developers"
+requires =
+"re unix cmdliner fileutils re.posix containers extlib containers.data"
+archive(byte) = "yj_scripts_common.cma"
+archive(byte, plugin) = "yj_scripts_common.cma"
+archive(native) = "yj_scripts_common.cmxa"
+archive(native, plugin) = "yj_scripts_common.cmxs"
+exists_if = "yj_scripts_common.cma"
+# OASIS_STOP
+

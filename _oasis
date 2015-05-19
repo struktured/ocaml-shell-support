@@ -1,0 +1,24 @@
+OASISFormat: 0.4
+Name:        yj-scripts
+Version:     0.1
+License:     GPL
+LicenseFile: LICENSE.txt
+Authors:     Carmelo Piccione
+Synopsis:    Ocaml scripts, for YJ developers
+BuildTools:  ocamlbuild
+Plugins: META (0.4), DevFiles (0.4)
+
+Library yj_scripts_common
+  Path:               bin
+  Pack:               true
+  Modules:            Shell_utils
+  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib,containers.data
+  FindLibName:        yj_scripts_common
+
+Executable git_clean_repo
+  Build: true
+  Path:               bin
+  MainIs:             git_repo_clean.ml
+  BuildDepends:       yj_scripts_common
+
+AlphaFeatures : ocamlbuild_more_args

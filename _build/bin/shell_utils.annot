@@ -1,0 +1,1175 @@
+"bin/shell_utils.ml" 8 189 193 "bin/shell_utils.ml" 8 189 197
+type(
+  string
+)
+ident(
+  def home "bin/shell_utils.ml" 9 219 219 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 8 189 200 "bin/shell_utils.ml" 8 189 211
+type(
+  string -> string
+)
+ident(
+  ext_ref Unix.getenv
+)
+"bin/shell_utils.ml" 8 189 212 "bin/shell_utils.ml" 8 189 218
+type(
+  string
+)
+"bin/shell_utils.ml" 8 189 200 "bin/shell_utils.ml" 8 189 218
+call(
+  stack
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 9 219 223 "bin/shell_utils.ml" 9 219 239
+type(
+  string
+)
+ident(
+  def scripts_dir_name "bin/shell_utils.ml" 11 249 249 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 9 219 242 "bin/shell_utils.ml" 9 219 247
+type(
+  string
+)
+"bin/shell_utils.ml" 11 249 253 "bin/shell_utils.ml" 11 249 264
+type(
+  FilePath.filename
+)
+ident(
+  def working_dir "bin/shell_utils.ml" 17 423 423 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 12 268 270 "bin/shell_utils.ml" 12 268 286
+type(
+  FilePath.filename -> FilePath.filename
+)
+ident(
+  ext_ref FilePath.dirname
+)
+"bin/shell_utils.ml" 12 268 287 "bin/shell_utils.ml" 12 268 295
+type(
+  FilePath.filename array
+)
+ident(
+  ext_ref Sys.argv
+)
+"bin/shell_utils.ml" 12 268 297 "bin/shell_utils.ml" 12 268 298
+type(
+  int
+)
+"bin/shell_utils.ml" 12 268 287 "bin/shell_utils.ml" 12 268 299
+type(
+  FilePath.filename
+)
+"bin/shell_utils.ml" 12 268 270 "bin/shell_utils.ml" 12 268 299
+call(
+  stack
+)
+type(
+  FilePath.filename
+)
+"bin/shell_utils.ml" 12 268 300 "bin/shell_utils.ml" 12 268 302
+type(
+  FilePath.filename ->
+  (FilePath.filename -> FilePath.filename) -> FilePath.filename
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"bin/shell_utils.ml" 12 268 307 "bin/shell_utils.ml" 12 268 308
+type(
+  FilePath.filename
+)
+ident(
+  def s "bin/shell_utils.ml" 13 312 314 "bin/shell_utils.ml" 15 391 421
+)
+"bin/shell_utils.ml" 13 312 320 "bin/shell_utils.ml" 13 312 328
+type(
+  ?pos:int -> ?len:int -> Re.re -> FilePath.filename -> string list
+)
+ident(
+  ext_ref Re.split
+)
+"bin/shell_utils.ml" 13 312 330 "bin/shell_utils.ml" 13 312 350
+type(
+  ?opts:Re_posix.opt list -> string -> Re.re
+)
+ident(
+  ext_ref Re_posix.compile_pat
+)
+"bin/shell_utils.ml" 13 312 351 "bin/shell_utils.ml" 13 312 367
+type(
+  string
+)
+ident(
+  int_ref scripts_dir_name "bin/shell_utils.ml" 9 219 223 "bin/shell_utils.ml" 9 219 239
+)
+"bin/shell_utils.ml" 13 312 329 "bin/shell_utils.ml" 13 312 368
+call(
+  stack
+)
+type(
+  Re.re
+)
+"bin/shell_utils.ml" 13 312 369 "bin/shell_utils.ml" 13 312 370
+type(
+  FilePath.filename
+)
+ident(
+  int_ref s "bin/shell_utils.ml" 12 268 307 "bin/shell_utils.ml" 12 268 308
+)
+"bin/shell_utils.ml" 13 312 320 "bin/shell_utils.ml" 13 312 370
+call(
+  stack
+)
+type(
+  string list
+)
+"bin/shell_utils.ml" 14 376 380 "bin/shell_utils.ml" 14 376 381
+type(
+  string
+)
+ident(
+  def h "bin/shell_utils.ml" 14 376 389 "bin/shell_utils.ml" 14 376 390
+)
+"bin/shell_utils.ml" 14 376 383 "bin/shell_utils.ml" 14 376 385
+type(
+  string list
+)
+ident(
+  def hs "bin/shell_utils.ml" 14 376 389 "bin/shell_utils.ml" 14 376 390
+)
+"bin/shell_utils.ml" 14 376 380 "bin/shell_utils.ml" 14 376 385
+type(
+  string list
+)
+"bin/shell_utils.ml" 14 376 389 "bin/shell_utils.ml" 14 376 390
+type(
+  FilePath.filename
+)
+ident(
+  int_ref h "bin/shell_utils.ml" 14 376 380 "bin/shell_utils.ml" 14 376 381
+)
+"bin/shell_utils.ml" 15 391 395 "bin/shell_utils.ml" 15 391 397
+type(
+  string list
+)
+"bin/shell_utils.ml" 15 391 401 "bin/shell_utils.ml" 15 391 421
+type(
+  FilePath.filename
+)
+ident(
+  ext_ref FilePath.current_dir
+)
+"bin/shell_utils.ml" 13 312 314 "bin/shell_utils.ml" 15 391 421
+type(
+  FilePath.filename
+)
+"bin/shell_utils.ml" 12 268 303 "bin/shell_utils.ml" 15 391 421
+type(
+  FilePath.filename -> FilePath.filename
+)
+"bin/shell_utils.ml" 12 268 270 "bin/shell_utils.ml" 15 391 421
+type(
+  FilePath.filename
+)
+"bin/shell_utils.ml" 19 445 451 "bin/shell_utils.ml" 19 445 456
+type(
+  [< `Error of 'a | `Ok of 'b ] -> ('b -> ([> `Error of 'a ] as 'c)) -> 'c
+)
+ident(
+  def >>= "bin/shell_utils.ml" 21 512 514 "bin/shell_utils.ml" 22 583 586
+)
+"bin/shell_utils.ml" 19 445 457 "bin/shell_utils.ml" 19 445 458
+type(
+  [< `Error of 'a | `Ok of 'b ] as 'd
+)
+ident(
+  def x "bin/shell_utils.ml" 19 445 459 "bin/shell_utils.ml" 19 445 509
+)
+"bin/shell_utils.ml" 19 445 459 "bin/shell_utils.ml" 19 445 460
+type(
+  'b -> 'c
+)
+ident(
+  def f "bin/shell_utils.ml" 19 445 463 "bin/shell_utils.ml" 19 445 509
+)
+"bin/shell_utils.ml" 19 445 469 "bin/shell_utils.ml" 19 445 470
+type(
+  'd
+)
+ident(
+  int_ref x "bin/shell_utils.ml" 19 445 457 "bin/shell_utils.ml" 19 445 458
+)
+"bin/shell_utils.ml" 19 445 483 "bin/shell_utils.ml" 19 445 484
+type(
+  'a
+)
+"bin/shell_utils.ml" 19 445 476 "bin/shell_utils.ml" 19 445 484
+type(
+  'd
+)
+"bin/shell_utils.ml" 19 445 488 "bin/shell_utils.ml" 19 445 489
+ident(
+  def e "bin/shell_utils.ml" 19 445 493 "bin/shell_utils.ml" 19 445 494
+)
+"bin/shell_utils.ml" 19 445 476 "bin/shell_utils.ml" 19 445 489
+type(
+  'd
+)
+"bin/shell_utils.ml" 19 445 493 "bin/shell_utils.ml" 19 445 494
+type(
+  'c
+)
+ident(
+  int_ref e "bin/shell_utils.ml" 19 445 476 "bin/shell_utils.ml" 19 445 489
+)
+"bin/shell_utils.ml" 19 445 501 "bin/shell_utils.ml" 19 445 502
+type(
+  'b
+)
+ident(
+  def o "bin/shell_utils.ml" 19 445 506 "bin/shell_utils.ml" 19 445 509
+)
+"bin/shell_utils.ml" 19 445 497 "bin/shell_utils.ml" 19 445 502
+type(
+  'd
+)
+"bin/shell_utils.ml" 19 445 506 "bin/shell_utils.ml" 19 445 507
+type(
+  'b -> 'c
+)
+ident(
+  int_ref f "bin/shell_utils.ml" 19 445 459 "bin/shell_utils.ml" 19 445 460
+)
+"bin/shell_utils.ml" 19 445 508 "bin/shell_utils.ml" 19 445 509
+type(
+  'b
+)
+ident(
+  int_ref o "bin/shell_utils.ml" 19 445 501 "bin/shell_utils.ml" 19 445 502
+)
+"bin/shell_utils.ml" 19 445 506 "bin/shell_utils.ml" 19 445 509
+call(
+  tail
+)
+type(
+  'c
+)
+"bin/shell_utils.ml" 19 445 463 "bin/shell_utils.ml" 19 445 509
+type(
+  'c
+)
+"bin/shell_utils.ml" 21 512 518 "bin/shell_utils.ml" 21 512 523
+type(
+  [< `Error of 'e | `Ok of 'f ] ->
+  ('f -> 'g) -> [> `Error of 'e | `Ok of 'g ]
+)
+ident(
+  def >>| "bin/shell_utils.ml" 21 512 582 "bin/shell_utils.ml" 22 583 586
+)
+"bin/shell_utils.ml" 21 512 524 "bin/shell_utils.ml" 21 512 525
+type(
+  [< `Error of 'e | `Ok of 'f ] as 'h
+)
+ident(
+  def x "bin/shell_utils.ml" 21 512 526 "bin/shell_utils.ml" 21 512 582
+)
+"bin/shell_utils.ml" 21 512 526 "bin/shell_utils.ml" 21 512 527
+type(
+  'f -> 'g
+)
+ident(
+  def f "bin/shell_utils.ml" 21 512 530 "bin/shell_utils.ml" 21 512 582
+)
+"bin/shell_utils.ml" 21 512 536 "bin/shell_utils.ml" 21 512 537
+type(
+  'h
+)
+ident(
+  int_ref x "bin/shell_utils.ml" 21 512 524 "bin/shell_utils.ml" 21 512 525
+)
+"bin/shell_utils.ml" 21 512 550 "bin/shell_utils.ml" 21 512 551
+type(
+  'e
+)
+"bin/shell_utils.ml" 21 512 543 "bin/shell_utils.ml" 21 512 551
+type(
+  'h
+)
+"bin/shell_utils.ml" 21 512 555 "bin/shell_utils.ml" 21 512 556
+ident(
+  def e "bin/shell_utils.ml" 21 512 560 "bin/shell_utils.ml" 21 512 561
+)
+"bin/shell_utils.ml" 21 512 543 "bin/shell_utils.ml" 21 512 556
+type(
+  'h
+)
+"bin/shell_utils.ml" 21 512 560 "bin/shell_utils.ml" 21 512 561
+type(
+  [> `Error of 'e | `Ok of 'g ] as 'i
+)
+ident(
+  int_ref e "bin/shell_utils.ml" 21 512 543 "bin/shell_utils.ml" 21 512 556
+)
+"bin/shell_utils.ml" 21 512 568 "bin/shell_utils.ml" 21 512 569
+type(
+  'f
+)
+ident(
+  def o "bin/shell_utils.ml" 21 512 573 "bin/shell_utils.ml" 21 512 582
+)
+"bin/shell_utils.ml" 21 512 564 "bin/shell_utils.ml" 21 512 569
+type(
+  'h
+)
+"bin/shell_utils.ml" 21 512 578 "bin/shell_utils.ml" 21 512 579
+type(
+  'f -> 'g
+)
+ident(
+  int_ref f "bin/shell_utils.ml" 21 512 526 "bin/shell_utils.ml" 21 512 527
+)
+"bin/shell_utils.ml" 21 512 580 "bin/shell_utils.ml" 21 512 581
+type(
+  'f
+)
+ident(
+  int_ref o "bin/shell_utils.ml" 21 512 568 "bin/shell_utils.ml" 21 512 569
+)
+"bin/shell_utils.ml" 21 512 577 "bin/shell_utils.ml" 21 512 582
+call(
+  stack
+)
+type(
+  'g
+)
+"bin/shell_utils.ml" 21 512 573 "bin/shell_utils.ml" 21 512 582
+type(
+  'i
+)
+"bin/shell_utils.ml" 21 512 530 "bin/shell_utils.ml" 21 512 582
+type(
+  'i
+)
+"bin/shell_utils.ml" 24 588 592 "bin/shell_utils.ml" 24 588 611
+type(
+  (char -> 'a) -> string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  def read_command_output "bin/shell_utils.ml" 36 940 940 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 24 588 612 "bin/shell_utils.ml" 24 588 613
+type(
+  char -> 'a
+)
+ident(
+  def f "bin/shell_utils.ml" 24 588 614 "bin/shell_utils.ml" 34 892 938
+)
+"bin/shell_utils.ml" 24 588 614 "bin/shell_utils.ml" 24 588 615
+type(
+  string
+)
+ident(
+  def s "bin/shell_utils.ml" 25 618 620 "bin/shell_utils.ml" 34 892 938
+)
+"bin/shell_utils.ml" 25 618 624 "bin/shell_utils.ml" 25 618 626
+type(
+  in_channel
+)
+ident(
+  def ic "bin/shell_utils.ml" 26 655 657 "bin/shell_utils.ml" 34 892 938
+)
+"bin/shell_utils.ml" 25 618 629 "bin/shell_utils.ml" 25 618 649
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Unix.open_process_in
+)
+"bin/shell_utils.ml" 25 618 650 "bin/shell_utils.ml" 25 618 651
+type(
+  string
+)
+ident(
+  int_ref s "bin/shell_utils.ml" 24 588 614 "bin/shell_utils.ml" 24 588 615
+)
+"bin/shell_utils.ml" 25 618 629 "bin/shell_utils.ml" 25 618 651
+call(
+  stack
+)
+type(
+  in_channel
+)
+"bin/shell_utils.ml" 27 662 673 "bin/shell_utils.ml" 27 662 677
+type(
+  bool
+)
+"bin/shell_utils.ml" 28 681 688 "bin/shell_utils.ml" 28 681 689
+type(
+  char -> 'a
+)
+ident(
+  int_ref f "bin/shell_utils.ml" 24 588 612 "bin/shell_utils.ml" 24 588 613
+)
+"bin/shell_utils.ml" 28 681 691 "bin/shell_utils.ml" 28 681 701
+type(
+  in_channel -> char
+)
+ident(
+  ext_ref Pervasives.input_char
+)
+"bin/shell_utils.ml" 28 681 702 "bin/shell_utils.ml" 28 681 704
+type(
+  in_channel
+)
+ident(
+  int_ref ic "bin/shell_utils.ml" 25 618 624 "bin/shell_utils.ml" 25 618 626
+)
+"bin/shell_utils.ml" 28 681 690 "bin/shell_utils.ml" 28 681 705
+call(
+  stack
+)
+type(
+  char
+)
+"bin/shell_utils.ml" 28 681 688 "bin/shell_utils.ml" 28 681 705
+call(
+  stack
+)
+type(
+  'a
+)
+"bin/shell_utils.ml" 27 662 667 "bin/shell_utils.ml" 29 706 715
+type(
+  unit
+)
+"bin/shell_utils.ml" 30 716 724 "bin/shell_utils.ml" 30 716 735
+type(
+  exn
+)
+"bin/shell_utils.ml" 30 716 739 "bin/shell_utils.ml" 30 716 741
+type(
+  unit
+)
+"bin/shell_utils.ml" 26 655 657 "bin/shell_utils.ml" 30 716 742
+type(
+  unit
+)
+"bin/shell_utils.ml" 31 744 752 "bin/shell_utils.ml" 31 744 773
+type(
+  in_channel -> Unix.process_status
+)
+ident(
+  ext_ref Unix.close_process_in
+)
+"bin/shell_utils.ml" 31 744 774 "bin/shell_utils.ml" 31 744 776
+type(
+  in_channel
+)
+ident(
+  int_ref ic "bin/shell_utils.ml" 25 618 624 "bin/shell_utils.ml" 25 618 626
+)
+"bin/shell_utils.ml" 31 744 752 "bin/shell_utils.ml" 31 744 776
+call(
+  stack
+)
+type(
+  Unix.process_status
+)
+"bin/shell_utils.ml" 32 782 799 "bin/shell_utils.ml" 32 782 800
+type(
+  int
+)
+"bin/shell_utils.ml" 32 782 786 "bin/shell_utils.ml" 32 782 800
+type(
+  Unix.process_status
+)
+"bin/shell_utils.ml" 32 782 808 "bin/shell_utils.ml" 32 782 809
+type(
+  string
+)
+ident(
+  int_ref s "bin/shell_utils.ml" 24 588 614 "bin/shell_utils.ml" 24 588 615
+)
+"bin/shell_utils.ml" 32 782 804 "bin/shell_utils.ml" 32 782 809
+type(
+  [> `Error of bool * string | `Ok of string ] as 'b
+)
+"bin/shell_utils.ml" 33 810 827 "bin/shell_utils.ml" 33 810 828
+type(
+  int
+)
+ident(
+  def r "bin/shell_utils.ml" 33 810 832 "bin/shell_utils.ml" 33 810 891
+)
+"bin/shell_utils.ml" 33 810 814 "bin/shell_utils.ml" 33 810 828
+type(
+  Unix.process_status
+)
+"bin/shell_utils.ml" 33 810 840 "bin/shell_utils.ml" 33 810 845
+type(
+  bool
+)
+"bin/shell_utils.ml" 33 810 847 "bin/shell_utils.ml" 33 810 872
+type(
+  string
+)
+"bin/shell_utils.ml" 33 810 873 "bin/shell_utils.ml" 33 810 874
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"bin/shell_utils.ml" 33 810 875 "bin/shell_utils.ml" 33 810 888
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"bin/shell_utils.ml" 33 810 889 "bin/shell_utils.ml" 33 810 890
+type(
+  int
+)
+ident(
+  int_ref r "bin/shell_utils.ml" 33 810 827 "bin/shell_utils.ml" 33 810 828
+)
+"bin/shell_utils.ml" 33 810 875 "bin/shell_utils.ml" 33 810 890
+call(
+  stack
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 33 810 847 "bin/shell_utils.ml" 33 810 890
+call(
+  stack
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 33 810 839 "bin/shell_utils.ml" 33 810 891
+type(
+  bool * string
+)
+"bin/shell_utils.ml" 33 810 832 "bin/shell_utils.ml" 33 810 891
+type(
+  'b
+)
+"bin/shell_utils.ml" 34 892 896 "bin/shell_utils.ml" 34 892 897
+type(
+  Unix.process_status
+)
+"bin/shell_utils.ml" 34 892 901 "bin/shell_utils.ml" 34 892 912
+type(
+  string -> 'b
+)
+ident(
+  ext_ref Pervasives.invalid_arg
+)
+"bin/shell_utils.ml" 34 892 914 "bin/shell_utils.ml" 34 892 933
+type(
+  string
+)
+"bin/shell_utils.ml" 34 892 934 "bin/shell_utils.ml" 34 892 935
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"bin/shell_utils.ml" 34 892 936 "bin/shell_utils.ml" 34 892 937
+type(
+  string
+)
+ident(
+  int_ref s "bin/shell_utils.ml" 24 588 614 "bin/shell_utils.ml" 24 588 615
+)
+"bin/shell_utils.ml" 34 892 913 "bin/shell_utils.ml" 34 892 938
+call(
+  stack
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 34 892 901 "bin/shell_utils.ml" 34 892 938
+call(
+  tail
+)
+type(
+  'b
+)
+"bin/shell_utils.ml" 31 744 746 "bin/shell_utils.ml" 34 892 938
+type(
+  'b
+)
+"bin/shell_utils.ml" 26 655 657 "bin/shell_utils.ml" 34 892 938
+type(
+  'b
+)
+"bin/shell_utils.ml" 25 618 620 "bin/shell_utils.ml" 34 892 938
+type(
+  'b
+)
+"bin/shell_utils.ml" 38 975 979 "bin/shell_utils.ml" 38 975 992
+type(
+  Buffer.t -> string
+)
+ident(
+  def buf_to_string "bin/shell_utils.ml" 43 1133 1133 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 38 975 993 "bin/shell_utils.ml" 38 975 996
+type(
+  Buffer.t
+)
+ident(
+  def buf "bin/shell_utils.ml" 39 999 1001 "bin/shell_utils.ml" 41 1109 1131
+)
+"bin/shell_utils.ml" 39 999 1005 "bin/shell_utils.ml" 39 999 1009
+type(
+  bytes
+)
+ident(
+  def into "bin/shell_utils.ml" 40 1048 1050 "bin/shell_utils.ml" 41 1109 1131
+)
+"bin/shell_utils.ml" 39 999 1012 "bin/shell_utils.ml" 39 999 1024
+type(
+  int -> bytes
+)
+ident(
+  ext_ref Bytes.create
+)
+"bin/shell_utils.ml" 39 999 1026 "bin/shell_utils.ml" 39 999 1039
+type(
+  Buffer.t -> int
+)
+ident(
+  ext_ref Buffer.length
+)
+"bin/shell_utils.ml" 39 999 1040 "bin/shell_utils.ml" 39 999 1043
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 38 975 993 "bin/shell_utils.ml" 38 975 996
+)
+"bin/shell_utils.ml" 39 999 1025 "bin/shell_utils.ml" 39 999 1044
+call(
+  stack
+)
+type(
+  int
+)
+"bin/shell_utils.ml" 39 999 1012 "bin/shell_utils.ml" 39 999 1044
+type(
+  bytes
+)
+"bin/shell_utils.ml" 40 1048 1054 "bin/shell_utils.ml" 40 1048 1055
+type(
+  int
+)
+"bin/shell_utils.ml" 40 1048 1058 "bin/shell_utils.ml" 40 1048 1074
+type(
+  Buffer.t -> Buffer.Array.t -> int -> int -> int
+)
+ident(
+  ext_ref Buffer.blit_into
+)
+"bin/shell_utils.ml" 40 1048 1075 "bin/shell_utils.ml" 40 1048 1078
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 38 975 993 "bin/shell_utils.ml" 38 975 996
+)
+"bin/shell_utils.ml" 40 1048 1079 "bin/shell_utils.ml" 40 1048 1083
+type(
+  bytes
+)
+ident(
+  int_ref into "bin/shell_utils.ml" 39 999 1005 "bin/shell_utils.ml" 39 999 1009
+)
+"bin/shell_utils.ml" 40 1048 1084 "bin/shell_utils.ml" 40 1048 1085
+type(
+  int
+)
+"bin/shell_utils.ml" 40 1048 1087 "bin/shell_utils.ml" 40 1048 1100
+type(
+  Buffer.t -> int
+)
+ident(
+  ext_ref Buffer.length
+)
+"bin/shell_utils.ml" 40 1048 1101 "bin/shell_utils.ml" 40 1048 1104
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 38 975 993 "bin/shell_utils.ml" 38 975 996
+)
+"bin/shell_utils.ml" 40 1048 1086 "bin/shell_utils.ml" 40 1048 1105
+call(
+  stack
+)
+type(
+  int
+)
+"bin/shell_utils.ml" 40 1048 1058 "bin/shell_utils.ml" 40 1048 1105
+call(
+  stack
+)
+type(
+  int
+)
+"bin/shell_utils.ml" 41 1109 1111 "bin/shell_utils.ml" 41 1109 1126
+type(
+  bytes -> string
+)
+ident(
+  ext_ref Bytes.to_string
+)
+"bin/shell_utils.ml" 41 1109 1127 "bin/shell_utils.ml" 41 1109 1131
+type(
+  bytes
+)
+ident(
+  int_ref into "bin/shell_utils.ml" 39 999 1005 "bin/shell_utils.ml" 39 999 1009
+)
+"bin/shell_utils.ml" 41 1109 1111 "bin/shell_utils.ml" 41 1109 1131
+call(
+  tail
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 40 1048 1050 "bin/shell_utils.ml" 41 1109 1131
+type(
+  string
+)
+"bin/shell_utils.ml" 39 999 1001 "bin/shell_utils.ml" 41 1109 1131
+type(
+  string
+)
+"bin/shell_utils.ml" 43 1133 1137 "bin/shell_utils.ml" 43 1133 1140
+type(
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  def run "bin/shell_utils.ml" 48 1283 1283 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 43 1133 1141 "bin/shell_utils.ml" 43 1133 1142
+type(
+  string
+)
+ident(
+  def s "bin/shell_utils.ml" 43 1133 1145 "bin/shell_utils.ml" 46 1251 1281
+)
+"bin/shell_utils.ml" 44 1163 1171 "bin/shell_utils.ml" 44 1163 1174
+type(
+  Buffer.t
+)
+ident(
+  def buf "bin/shell_utils.ml" 45 1198 1202 "bin/shell_utils.ml" 46 1251 1281
+)
+"bin/shell_utils.ml" 44 1163 1177 "bin/shell_utils.ml" 44 1163 1190
+type(
+  ?bounded:bool -> int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"bin/shell_utils.ml" 44 1163 1191 "bin/shell_utils.ml" 44 1163 1194
+type(
+  int
+)
+"bin/shell_utils.ml" 44 1163 1177 "bin/shell_utils.ml" 44 1163 1194
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"bin/shell_utils.ml" 45 1198 1202 "bin/shell_utils.ml" 45 1198 1221
+type(
+  (Buffer.Array.elt -> unit) ->
+  string -> [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref read_command_output "bin/shell_utils.ml" 24 588 592 "bin/shell_utils.ml" 24 588 611
+)
+"bin/shell_utils.ml" 45 1198 1223 "bin/shell_utils.ml" 45 1198 1239
+type(
+  Buffer.t -> Buffer.Array.elt -> unit
+)
+ident(
+  ext_ref Buffer.push_back
+)
+"bin/shell_utils.ml" 45 1198 1240 "bin/shell_utils.ml" 45 1198 1243
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 44 1163 1171 "bin/shell_utils.ml" 44 1163 1174
+)
+"bin/shell_utils.ml" 45 1198 1222 "bin/shell_utils.ml" 45 1198 1244
+call(
+  stack
+)
+type(
+  Buffer.Array.elt -> unit
+)
+"bin/shell_utils.ml" 45 1198 1245 "bin/shell_utils.ml" 45 1198 1246
+type(
+  string
+)
+ident(
+  int_ref s "bin/shell_utils.ml" 43 1133 1141 "bin/shell_utils.ml" 43 1133 1142
+)
+"bin/shell_utils.ml" 45 1198 1202 "bin/shell_utils.ml" 45 1198 1246
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/shell_utils.ml" 45 1198 1247 "bin/shell_utils.ml" 45 1198 1250
+type(
+  [ `Error of bool * string | `Ok of string ] ->
+  (string -> string) -> ([> `Error of bool * string | `Ok of string ] as 'a)
+)
+ident(
+  int_ref Infix.( >>| ) "bin/shell_utils.ml" 21 512 518 "bin/shell_utils.ml" 21 512 523
+)
+"bin/shell_utils.ml" 46 1251 1259 "bin/shell_utils.ml" 46 1251 1260
+type(
+  string
+)
+"bin/shell_utils.ml" 46 1251 1264 "bin/shell_utils.ml" 46 1251 1277
+type(
+  Buffer.t -> string
+)
+ident(
+  int_ref buf_to_string "bin/shell_utils.ml" 38 975 979 "bin/shell_utils.ml" 38 975 992
+)
+"bin/shell_utils.ml" 46 1251 1278 "bin/shell_utils.ml" 46 1251 1281
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 44 1163 1171 "bin/shell_utils.ml" 44 1163 1174
+)
+"bin/shell_utils.ml" 46 1251 1264 "bin/shell_utils.ml" 46 1251 1281
+call(
+  tail
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 46 1251 1255 "bin/shell_utils.ml" 46 1251 1281
+type(
+  string -> string
+)
+"bin/shell_utils.ml" 45 1198 1202 "bin/shell_utils.ml" 46 1251 1281
+call(
+  tail
+)
+type(
+  'a
+)
+"bin/shell_utils.ml" 44 1163 1167 "bin/shell_utils.ml" 46 1251 1281
+type(
+  'a
+)
+"bin/shell_utils.ml" 48 1283 1287 "bin/shell_utils.ml" 48 1283 1294
+type(
+  string -> string
+)
+ident(
+  def run_exn "bin/shell_utils.ml" 54 1507 1507 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 48 1283 1295 "bin/shell_utils.ml" 48 1283 1296
+type(
+  string
+)
+ident(
+  def s "bin/shell_utils.ml" 48 1283 1299 "bin/shell_utils.ml" 52 1441 1505
+)
+"bin/shell_utils.ml" 49 1317 1325 "bin/shell_utils.ml" 49 1317 1328
+type(
+  Buffer.t
+)
+ident(
+  def buf "bin/shell_utils.ml" 50 1352 1354 "bin/shell_utils.ml" 52 1441 1505
+)
+"bin/shell_utils.ml" 49 1317 1331 "bin/shell_utils.ml" 49 1317 1344
+type(
+  ?bounded:bool -> int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"bin/shell_utils.ml" 49 1317 1345 "bin/shell_utils.ml" 49 1317 1348
+type(
+  int
+)
+"bin/shell_utils.ml" 49 1317 1331 "bin/shell_utils.ml" 49 1317 1348
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"bin/shell_utils.ml" 50 1352 1360 "bin/shell_utils.ml" 50 1352 1379
+type(
+  (Buffer.Array.elt -> unit) ->
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref read_command_output "bin/shell_utils.ml" 24 588 592 "bin/shell_utils.ml" 24 588 611
+)
+"bin/shell_utils.ml" 50 1352 1381 "bin/shell_utils.ml" 50 1352 1397
+type(
+  Buffer.t -> Buffer.Array.elt -> unit
+)
+ident(
+  ext_ref Buffer.push_back
+)
+"bin/shell_utils.ml" 50 1352 1398 "bin/shell_utils.ml" 50 1352 1401
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 49 1317 1325 "bin/shell_utils.ml" 49 1317 1328
+)
+"bin/shell_utils.ml" 50 1352 1380 "bin/shell_utils.ml" 50 1352 1402
+call(
+  stack
+)
+type(
+  Buffer.Array.elt -> unit
+)
+"bin/shell_utils.ml" 50 1352 1403 "bin/shell_utils.ml" 50 1352 1404
+type(
+  string
+)
+ident(
+  int_ref s "bin/shell_utils.ml" 48 1283 1295 "bin/shell_utils.ml" 48 1283 1296
+)
+"bin/shell_utils.ml" 50 1352 1360 "bin/shell_utils.ml" 50 1352 1404
+call(
+  stack
+)
+type(
+  [> `Error of bool * string | `Ok of string ] as 'a
+)
+"bin/shell_utils.ml" 51 1410 1418 "bin/shell_utils.ml" 51 1410 1419
+type(
+  string
+)
+"bin/shell_utils.ml" 51 1410 1414 "bin/shell_utils.ml" 51 1410 1419
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/shell_utils.ml" 51 1410 1423 "bin/shell_utils.ml" 51 1410 1436
+type(
+  Buffer.t -> string
+)
+ident(
+  int_ref buf_to_string "bin/shell_utils.ml" 38 975 979 "bin/shell_utils.ml" 38 975 992
+)
+"bin/shell_utils.ml" 51 1410 1437 "bin/shell_utils.ml" 51 1410 1440
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "bin/shell_utils.ml" 49 1317 1325 "bin/shell_utils.ml" 49 1317 1328
+)
+"bin/shell_utils.ml" 51 1410 1423 "bin/shell_utils.ml" 51 1410 1440
+call(
+  tail
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 52 1441 1453 "bin/shell_utils.ml" 52 1441 1454
+type(
+  bool
+)
+ident(
+  def b "bin/shell_utils.ml" 52 1441 1461 "bin/shell_utils.ml" 52 1441 1505
+)
+"bin/shell_utils.ml" 52 1441 1455 "bin/shell_utils.ml" 52 1441 1456
+type(
+  string
+)
+ident(
+  def e "bin/shell_utils.ml" 52 1441 1461 "bin/shell_utils.ml" 52 1441 1505
+)
+"bin/shell_utils.ml" 52 1441 1452 "bin/shell_utils.ml" 52 1441 1457
+type(
+  bool * string
+)
+"bin/shell_utils.ml" 52 1441 1445 "bin/shell_utils.ml" 52 1441 1457
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/shell_utils.ml" 52 1441 1461 "bin/shell_utils.ml" 52 1441 1469
+type(
+  string -> string
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"bin/shell_utils.ml" 52 1441 1470 "bin/shell_utils.ml" 52 1441 1484
+type(
+  (bool -> string -> string, unit, string) format -> bool -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"bin/shell_utils.ml" 52 1441 1485 "bin/shell_utils.ml" 52 1441 1500
+type(
+  (bool -> string -> string, unit, string) format
+)
+"bin/shell_utils.ml" 52 1441 1501 "bin/shell_utils.ml" 52 1441 1502
+type(
+  bool
+)
+ident(
+  int_ref b "bin/shell_utils.ml" 52 1441 1453 "bin/shell_utils.ml" 52 1441 1454
+)
+"bin/shell_utils.ml" 52 1441 1503 "bin/shell_utils.ml" 52 1441 1504
+type(
+  string
+)
+ident(
+  int_ref e "bin/shell_utils.ml" 52 1441 1455 "bin/shell_utils.ml" 52 1441 1456
+)
+"bin/shell_utils.ml" 52 1441 1469 "bin/shell_utils.ml" 52 1441 1505
+call(
+  stack
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 52 1441 1461 "bin/shell_utils.ml" 52 1441 1505
+call(
+  tail
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 50 1352 1354 "bin/shell_utils.ml" 52 1441 1505
+type(
+  string
+)
+"bin/shell_utils.ml" 49 1317 1321 "bin/shell_utils.ml" 52 1441 1505
+type(
+  string
+)
+"bin/shell_utils.ml" 54 1507 1511 "bin/shell_utils.ml" 54 1507 1517
+type(
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  def system "bin/shell_utils.ml" 58 1598 1655 "bin/shell_utils.ml" 1 0 -1
+)
+"bin/shell_utils.ml" 54 1507 1518 "bin/shell_utils.ml" 54 1507 1521
+type(
+  string
+)
+ident(
+  def cmd "bin/shell_utils.ml" 55 1524 1526 "bin/shell_utils.ml" 58 1598 1655
+)
+"bin/shell_utils.ml" 55 1524 1532 "bin/shell_utils.ml" 55 1524 1543
+type(
+  string -> int
+)
+ident(
+  ext_ref Sys.command
+)
+"bin/shell_utils.ml" 55 1524 1544 "bin/shell_utils.ml" 55 1524 1547
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/shell_utils.ml" 54 1507 1518 "bin/shell_utils.ml" 54 1507 1521
+)
+"bin/shell_utils.ml" 55 1524 1532 "bin/shell_utils.ml" 55 1524 1547
+type(
+  int
+)
+"bin/shell_utils.ml" 56 1554 1558 "bin/shell_utils.ml" 56 1554 1559
+type(
+  int
+)
+"bin/shell_utils.ml" 56 1554 1567 "bin/shell_utils.ml" 56 1554 1570
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/shell_utils.ml" 54 1507 1518 "bin/shell_utils.ml" 54 1507 1521
+)
+"bin/shell_utils.ml" 56 1554 1563 "bin/shell_utils.ml" 56 1554 1570
+type(
+  [> `Error of bool * string | `Ok of string ] as 'a
+)
+"bin/shell_utils.ml" 57 1571 1575 "bin/shell_utils.ml" 57 1571 1578
+type(
+  int
+)
+ident(
+  def ret "bin/shell_utils.ml" 57 1571 1582 "bin/shell_utils.ml" 58 1598 1655
+)
+"bin/shell_utils.ml" 57 1571 1590 "bin/shell_utils.ml" 57 1571 1595
+type(
+  bool
+)
+"bin/shell_utils.ml" 58 1598 1602 "bin/shell_utils.ml" 58 1598 1616
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"bin/shell_utils.ml" 58 1598 1617 "bin/shell_utils.ml" 58 1598 1646
+type(
+  (string -> int -> string, unit, string) format
+)
+"bin/shell_utils.ml" 58 1598 1647 "bin/shell_utils.ml" 58 1598 1650
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/shell_utils.ml" 54 1507 1518 "bin/shell_utils.ml" 54 1507 1521
+)
+"bin/shell_utils.ml" 58 1598 1651 "bin/shell_utils.ml" 58 1598 1654
+type(
+  int
+)
+ident(
+  int_ref ret "bin/shell_utils.ml" 57 1571 1575 "bin/shell_utils.ml" 57 1571 1578
+)
+"bin/shell_utils.ml" 58 1598 1602 "bin/shell_utils.ml" 58 1598 1654
+call(
+  stack
+)
+type(
+  string
+)
+"bin/shell_utils.ml" 57 1571 1589 "bin/shell_utils.ml" 58 1598 1655
+type(
+  bool * string
+)
+"bin/shell_utils.ml" 57 1571 1582 "bin/shell_utils.ml" 58 1598 1655
+type(
+  'a
+)
+"bin/shell_utils.ml" 55 1524 1526 "bin/shell_utils.ml" 58 1598 1655
+type(
+  'a
+)

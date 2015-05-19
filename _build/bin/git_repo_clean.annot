@@ -1,0 +1,2544 @@
+"bin/git_repo_clean.ml" 10 191 195 "bin/git_repo_clean.ml" 10 191 199
+type(
+  string
+)
+ident(
+  def home "bin/git_repo_clean.ml" 11 221 221 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 10 191 202 "bin/git_repo_clean.ml" 10 191 213
+type(
+  string -> string
+)
+ident(
+  ext_ref Unix.getenv
+)
+"bin/git_repo_clean.ml" 10 191 214 "bin/git_repo_clean.ml" 10 191 220
+type(
+  string
+)
+"bin/git_repo_clean.ml" 10 191 202 "bin/git_repo_clean.ml" 10 191 220
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 11 221 225 "bin/git_repo_clean.ml" 11 221 241
+type(
+  string
+)
+ident(
+  def scripts_dir_name "bin/git_repo_clean.ml" 13 263 263 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 11 221 244 "bin/git_repo_clean.ml" 11 221 249
+type(
+  string
+)
+"bin/git_repo_clean.ml" 13 263 271 "bin/git_repo_clean.ml" 13 263 284
+type(
+  (FilePath.filename -> unit, out_channel, unit) format ->
+  FilePath.filename -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"bin/git_repo_clean.ml" 13 263 285 "bin/git_repo_clean.ml" 13 263 310
+type(
+  (FilePath.filename -> unit, out_channel, unit) format
+)
+"bin/git_repo_clean.ml" 13 263 311 "bin/git_repo_clean.ml" 13 263 322
+type(
+  FilePath.filename
+)
+ident(
+  ext_ref Shell_utils.working_dir
+)
+"bin/git_repo_clean.ml" 13 263 271 "bin/git_repo_clean.ml" 13 263 322
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 15 324 328 "bin/git_repo_clean.ml" 15 324 345
+type(
+  string
+)
+ident(
+  def no_ssl_verify_opt "bin/git_repo_clean.ml" 17 374 374 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 15 324 348 "bin/git_repo_clean.ml" 15 324 372
+type(
+  string
+)
+"bin/git_repo_clean.ml" 17 374 378 "bin/git_repo_clean.ml" 17 374 385
+type(
+  string Cmdliner.Term.t
+)
+ident(
+  def pattern "bin/git_repo_clean.ml" 22 550 550 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 18 388 394 "bin/git_repo_clean.ml" 18 388 397
+type(
+  string
+)
+ident(
+  def doc "bin/git_repo_clean.ml" 20 474 476 "bin/git_repo_clean.ml" 20 474 548
+)
+"bin/git_repo_clean.ml" 18 388 400 "bin/git_repo_clean.ml" 18 388 468
+type(
+  string
+)
+"bin/git_repo_clean.ml" 20 474 481 "bin/git_repo_clean.ml" 20 474 489
+type(
+  string option Cmdliner.Arg.t -> string Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.required
+)
+"bin/git_repo_clean.ml" 20 474 490 "bin/git_repo_clean.ml" 20 474 491
+type(
+  (string option Cmdliner.Arg.t -> string Cmdliner.Term.t) ->
+  string option Cmdliner.Arg.t -> string Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 20 474 492 "bin/git_repo_clean.ml" 20 474 495
+type(
+  ?rev:bool ->
+  int ->
+  string option Cmdliner.Arg.converter ->
+  string option -> Cmdliner.Arg.info -> string option Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.pos
+)
+"bin/git_repo_clean.ml" 20 474 496 "bin/git_repo_clean.ml" 20 474 497
+type(
+  int
+)
+"bin/git_repo_clean.ml" 20 474 499 "bin/git_repo_clean.ml" 20 474 503
+type(
+  ?none:string ->
+  string Cmdliner.Arg.converter -> string option Cmdliner.Arg.converter
+)
+ident(
+  ext_ref Cmdliner.Arg.some
+)
+"bin/git_repo_clean.ml" 20 474 504 "bin/git_repo_clean.ml" 20 474 510
+type(
+  string Cmdliner.Arg.converter
+)
+ident(
+  ext_ref Cmdliner.Arg.string
+)
+"bin/git_repo_clean.ml" 20 474 498 "bin/git_repo_clean.ml" 20 474 511
+call(
+  stack
+)
+type(
+  string option Cmdliner.Arg.converter
+)
+"bin/git_repo_clean.ml" 20 474 512 "bin/git_repo_clean.ml" 20 474 516
+type(
+  string option
+)
+"bin/git_repo_clean.ml" 20 474 492 "bin/git_repo_clean.ml" 20 474 516
+call(
+  stack
+)
+type(
+  Cmdliner.Arg.info -> string option Cmdliner.Arg.t
+)
+"bin/git_repo_clean.ml" 20 474 517 "bin/git_repo_clean.ml" 20 474 518
+type(
+  (Cmdliner.Arg.info -> string option Cmdliner.Arg.t) ->
+  Cmdliner.Arg.info -> string option Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 20 474 519 "bin/git_repo_clean.ml" 20 474 523
+type(
+  ?docs:string ->
+  ?docv:string -> ?doc:string -> string list -> Cmdliner.Arg.info
+)
+ident(
+  ext_ref Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 20 474 524 "bin/git_repo_clean.ml" 20 474 526
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 20 474 528 "bin/git_repo_clean.ml" 20 474 531
+type(
+  string
+)
+ident(
+  int_ref doc "bin/git_repo_clean.ml" 18 388 394 "bin/git_repo_clean.ml" 18 388 397
+)
+"bin/git_repo_clean.ml" 20 474 538 "bin/git_repo_clean.ml" 20 474 547
+type(
+  string
+)
+"bin/git_repo_clean.ml" 20 474 519 "bin/git_repo_clean.ml" 20 474 547
+call(
+  stack
+)
+type(
+  Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 20 474 492 "bin/git_repo_clean.ml" 20 474 547
+call(
+  stack
+)
+type(
+  string option Cmdliner.Arg.t
+)
+"bin/git_repo_clean.ml" 20 474 481 "bin/git_repo_clean.ml" 20 474 547
+call(
+  stack
+)
+type(
+  string Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 18 388 390 "bin/git_repo_clean.ml" 20 474 548
+type(
+  string Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 22 550 554 "bin/git_repo_clean.ml" 22 550 562
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  def for_tags "bin/git_repo_clean.ml" 27 676 676 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 23 565 571 "bin/git_repo_clean.ml" 23 565 574
+type(
+  string
+)
+ident(
+  def doc "bin/git_repo_clean.ml" 24 609 611 "bin/git_repo_clean.ml" 25 653 674
+)
+"bin/git_repo_clean.ml" 23 565 577 "bin/git_repo_clean.ml" 23 565 605
+type(
+  string
+)
+"bin/git_repo_clean.ml" 24 609 616 "bin/git_repo_clean.ml" 24 609 621
+type(
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.value
+)
+"bin/git_repo_clean.ml" 24 609 622 "bin/git_repo_clean.ml" 24 609 623
+type(
+  (bool Cmdliner.Arg.t -> bool Cmdliner.Term.t) ->
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 24 609 624 "bin/git_repo_clean.ml" 24 609 628
+type(
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.flag
+)
+"bin/git_repo_clean.ml" 24 609 629 "bin/git_repo_clean.ml" 24 609 630
+type(
+  (Cmdliner.Arg.info -> bool Cmdliner.Arg.t) ->
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 24 609 631 "bin/git_repo_clean.ml" 24 609 635
+type(
+  ?docs:string ->
+  ?docv:string -> ?doc:string -> string list -> Cmdliner.Arg.info
+)
+ident(
+  ext_ref Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 24 609 637 "bin/git_repo_clean.ml" 24 609 640
+type(
+  string
+)
+"bin/git_repo_clean.ml" 24 609 641 "bin/git_repo_clean.ml" 24 609 646
+type(
+  string
+)
+"bin/git_repo_clean.ml" 24 609 636 "bin/git_repo_clean.ml" 24 609 647
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 24 609 649 "bin/git_repo_clean.ml" 24 609 652
+type(
+  string
+)
+ident(
+  int_ref doc "bin/git_repo_clean.ml" 23 565 571 "bin/git_repo_clean.ml" 23 565 574
+)
+"bin/git_repo_clean.ml" 25 653 668 "bin/git_repo_clean.ml" 25 653 673
+type(
+  string
+)
+"bin/git_repo_clean.ml" 24 609 631 "bin/git_repo_clean.ml" 25 653 673
+call(
+  stack
+)
+type(
+  Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 24 609 624 "bin/git_repo_clean.ml" 25 653 673
+call(
+  stack
+)
+type(
+  bool Cmdliner.Arg.t
+)
+"bin/git_repo_clean.ml" 24 609 616 "bin/git_repo_clean.ml" 25 653 673
+call(
+  stack
+)
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 23 565 567 "bin/git_repo_clean.ml" 25 653 674
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 27 676 680 "bin/git_repo_clean.ml" 27 676 690
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  def local_only "bin/git_repo_clean.ml" 32 809 809 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 28 693 699 "bin/git_repo_clean.ml" 28 693 702
+type(
+  string
+)
+ident(
+  def doc "bin/git_repo_clean.ml" 29 738 740 "bin/git_repo_clean.ml" 30 784 807
+)
+"bin/git_repo_clean.ml" 28 693 705 "bin/git_repo_clean.ml" 28 693 734
+type(
+  string
+)
+"bin/git_repo_clean.ml" 29 738 745 "bin/git_repo_clean.ml" 29 738 750
+type(
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.value
+)
+"bin/git_repo_clean.ml" 29 738 751 "bin/git_repo_clean.ml" 29 738 752
+type(
+  (bool Cmdliner.Arg.t -> bool Cmdliner.Term.t) ->
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 29 738 753 "bin/git_repo_clean.ml" 29 738 757
+type(
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.flag
+)
+"bin/git_repo_clean.ml" 29 738 758 "bin/git_repo_clean.ml" 29 738 759
+type(
+  (Cmdliner.Arg.info -> bool Cmdliner.Arg.t) ->
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 29 738 760 "bin/git_repo_clean.ml" 29 738 764
+type(
+  ?docs:string ->
+  ?docv:string -> ?doc:string -> string list -> Cmdliner.Arg.info
+)
+ident(
+  ext_ref Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 29 738 766 "bin/git_repo_clean.ml" 29 738 769
+type(
+  string
+)
+"bin/git_repo_clean.ml" 29 738 770 "bin/git_repo_clean.ml" 29 738 777
+type(
+  string
+)
+"bin/git_repo_clean.ml" 29 738 765 "bin/git_repo_clean.ml" 29 738 778
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 29 738 780 "bin/git_repo_clean.ml" 29 738 783
+type(
+  string
+)
+ident(
+  int_ref doc "bin/git_repo_clean.ml" 28 693 699 "bin/git_repo_clean.ml" 28 693 702
+)
+"bin/git_repo_clean.ml" 30 784 799 "bin/git_repo_clean.ml" 30 784 806
+type(
+  string
+)
+"bin/git_repo_clean.ml" 29 738 760 "bin/git_repo_clean.ml" 30 784 806
+call(
+  stack
+)
+type(
+  Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 29 738 753 "bin/git_repo_clean.ml" 30 784 806
+call(
+  stack
+)
+type(
+  bool Cmdliner.Arg.t
+)
+"bin/git_repo_clean.ml" 29 738 745 "bin/git_repo_clean.ml" 30 784 806
+call(
+  stack
+)
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 28 693 695 "bin/git_repo_clean.ml" 30 784 807
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 32 809 813 "bin/git_repo_clean.ml" 32 809 824
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  def remote_only "bin/git_repo_clean.ml" 37 945 945 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 33 827 833 "bin/git_repo_clean.ml" 33 827 836
+type(
+  string
+)
+ident(
+  def doc "bin/git_repo_clean.ml" 34 872 874 "bin/git_repo_clean.ml" 35 919 943
+)
+"bin/git_repo_clean.ml" 33 827 839 "bin/git_repo_clean.ml" 33 827 868
+type(
+  string
+)
+"bin/git_repo_clean.ml" 34 872 879 "bin/git_repo_clean.ml" 34 872 884
+type(
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.value
+)
+"bin/git_repo_clean.ml" 34 872 885 "bin/git_repo_clean.ml" 34 872 886
+type(
+  (bool Cmdliner.Arg.t -> bool Cmdliner.Term.t) ->
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 34 872 887 "bin/git_repo_clean.ml" 34 872 891
+type(
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.flag
+)
+"bin/git_repo_clean.ml" 34 872 892 "bin/git_repo_clean.ml" 34 872 893
+type(
+  (Cmdliner.Arg.info -> bool Cmdliner.Arg.t) ->
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 34 872 894 "bin/git_repo_clean.ml" 34 872 898
+type(
+  ?docs:string ->
+  ?docv:string -> ?doc:string -> string list -> Cmdliner.Arg.info
+)
+ident(
+  ext_ref Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 34 872 900 "bin/git_repo_clean.ml" 34 872 903
+type(
+  string
+)
+"bin/git_repo_clean.ml" 34 872 904 "bin/git_repo_clean.ml" 34 872 912
+type(
+  string
+)
+"bin/git_repo_clean.ml" 34 872 899 "bin/git_repo_clean.ml" 34 872 913
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 34 872 915 "bin/git_repo_clean.ml" 34 872 918
+type(
+  string
+)
+ident(
+  int_ref doc "bin/git_repo_clean.ml" 33 827 833 "bin/git_repo_clean.ml" 33 827 836
+)
+"bin/git_repo_clean.ml" 35 919 934 "bin/git_repo_clean.ml" 35 919 942
+type(
+  string
+)
+"bin/git_repo_clean.ml" 34 872 894 "bin/git_repo_clean.ml" 35 919 942
+call(
+  stack
+)
+type(
+  Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 34 872 887 "bin/git_repo_clean.ml" 35 919 942
+call(
+  stack
+)
+type(
+  bool Cmdliner.Arg.t
+)
+"bin/git_repo_clean.ml" 34 872 879 "bin/git_repo_clean.ml" 35 919 942
+call(
+  stack
+)
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 33 827 829 "bin/git_repo_clean.ml" 35 919 943
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 37 945 949 "bin/git_repo_clean.ml" 37 945 962
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  def stop_on_error "bin/git_repo_clean.ml" 42 1095 1095 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 38 965 971 "bin/git_repo_clean.ml" 38 965 974
+type(
+  string
+)
+ident(
+  def doc "bin/git_repo_clean.ml" 39 1020 1022 "bin/git_repo_clean.ml" 40 1062 1093
+)
+"bin/git_repo_clean.ml" 38 965 977 "bin/git_repo_clean.ml" 38 965 1016
+type(
+  string
+)
+"bin/git_repo_clean.ml" 39 1020 1027 "bin/git_repo_clean.ml" 39 1020 1032
+type(
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.value
+)
+"bin/git_repo_clean.ml" 39 1020 1033 "bin/git_repo_clean.ml" 39 1020 1034
+type(
+  (bool Cmdliner.Arg.t -> bool Cmdliner.Term.t) ->
+  bool Cmdliner.Arg.t -> bool Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 39 1020 1035 "bin/git_repo_clean.ml" 39 1020 1039
+type(
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.flag
+)
+"bin/git_repo_clean.ml" 39 1020 1040 "bin/git_repo_clean.ml" 39 1020 1041
+type(
+  (Cmdliner.Arg.info -> bool Cmdliner.Arg.t) ->
+  Cmdliner.Arg.info -> bool Cmdliner.Arg.t
+)
+ident(
+  ext_ref Cmdliner.Arg.( & )
+)
+"bin/git_repo_clean.ml" 39 1020 1042 "bin/git_repo_clean.ml" 39 1020 1046
+type(
+  ?docs:string ->
+  ?docv:string -> ?doc:string -> string list -> Cmdliner.Arg.info
+)
+ident(
+  ext_ref Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 39 1020 1048 "bin/git_repo_clean.ml" 39 1020 1051
+type(
+  string
+)
+"bin/git_repo_clean.ml" 39 1020 1052 "bin/git_repo_clean.ml" 39 1020 1055
+type(
+  string
+)
+"bin/git_repo_clean.ml" 39 1020 1047 "bin/git_repo_clean.ml" 39 1020 1056
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 39 1020 1058 "bin/git_repo_clean.ml" 39 1020 1061
+type(
+  string
+)
+ident(
+  int_ref doc "bin/git_repo_clean.ml" 38 965 971 "bin/git_repo_clean.ml" 38 965 974
+)
+"bin/git_repo_clean.ml" 40 1062 1077 "bin/git_repo_clean.ml" 40 1062 1092
+type(
+  string
+)
+"bin/git_repo_clean.ml" 39 1020 1042 "bin/git_repo_clean.ml" 40 1062 1092
+call(
+  stack
+)
+type(
+  Cmdliner.Arg.info
+)
+"bin/git_repo_clean.ml" 39 1020 1035 "bin/git_repo_clean.ml" 40 1062 1092
+call(
+  stack
+)
+type(
+  bool Cmdliner.Arg.t
+)
+"bin/git_repo_clean.ml" 39 1020 1027 "bin/git_repo_clean.ml" 40 1062 1092
+call(
+  stack
+)
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 38 965 967 "bin/git_repo_clean.ml" 40 1062 1093
+type(
+  bool Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 44 1107 1111 "bin/git_repo_clean.ml" 44 1107 1116
+type(
+  string -> unit
+)
+ident(
+  def print "bin/git_repo_clean.ml" 46 1163 1163 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 44 1107 1117 "bin/git_repo_clean.ml" 44 1107 1118
+type(
+  string
+)
+ident(
+  def s "bin/git_repo_clean.ml" 44 1107 1121 "bin/git_repo_clean.ml" 44 1107 1161
+)
+"bin/git_repo_clean.ml" 44 1107 1121 "bin/git_repo_clean.ml" 44 1107 1134
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"bin/git_repo_clean.ml" 44 1107 1135 "bin/git_repo_clean.ml" 44 1107 1159
+type(
+  (string -> unit, out_channel, unit) format
+)
+"bin/git_repo_clean.ml" 44 1107 1160 "bin/git_repo_clean.ml" 44 1107 1161
+type(
+  string
+)
+ident(
+  int_ref s "bin/git_repo_clean.ml" 44 1107 1117 "bin/git_repo_clean.ml" 44 1107 1118
+)
+"bin/git_repo_clean.ml" 44 1107 1121 "bin/git_repo_clean.ml" 44 1107 1161
+call(
+  tail
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 46 1163 1167 "bin/git_repo_clean.ml" 46 1163 1179
+type(
+  unit -> [> `Error of bool * string | `Ok of string list ]
+)
+ident(
+  def get_branches "bin/git_repo_clean.ml" 51 1294 1294 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 46 1163 1180 "bin/git_repo_clean.ml" 46 1163 1182
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 47 1185 1191 "bin/git_repo_clean.ml" 47 1185 1194
+type(
+  string
+)
+ident(
+  def cmd "bin/git_repo_clean.ml" 48 1219 1221 "bin/git_repo_clean.ml" 49 1252 1290
+)
+"bin/git_repo_clean.ml" 47 1185 1197 "bin/git_repo_clean.ml" 47 1185 1215
+type(
+  string
+)
+"bin/git_repo_clean.ml" 48 1219 1221 "bin/git_repo_clean.ml" 48 1219 1234
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 48 1219 1235 "bin/git_repo_clean.ml" 48 1219 1238
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 47 1185 1191 "bin/git_repo_clean.ml" 47 1185 1194
+)
+"bin/git_repo_clean.ml" 48 1219 1221 "bin/git_repo_clean.ml" 48 1219 1238
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 48 1219 1240 "bin/git_repo_clean.ml" 48 1219 1243
+type(
+  string -> [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  ext_ref Shell_utils.run
+)
+"bin/git_repo_clean.ml" 48 1219 1244 "bin/git_repo_clean.ml" 48 1219 1247
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 47 1185 1191 "bin/git_repo_clean.ml" 47 1185 1194
+)
+"bin/git_repo_clean.ml" 48 1219 1240 "bin/git_repo_clean.ml" 48 1219 1247
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 48 1219 1248 "bin/git_repo_clean.ml" 48 1219 1251
+type(
+  [ `Error of bool * string | `Ok of string ] ->
+  (string -> string list) ->
+  ([> `Error of bool * string | `Ok of string list ] as 'a)
+)
+ident(
+  ext_ref Shell_utils.Infix.( >>| )
+)
+"bin/git_repo_clean.ml" 49 1252 1254 "bin/git_repo_clean.ml" 49 1252 1262
+type(
+  ?pos:int -> ?len:int -> Re.re -> string -> string list
+)
+ident(
+  ext_ref Re.split
+)
+"bin/git_repo_clean.ml" 49 1252 1264 "bin/git_repo_clean.ml" 49 1252 1284
+type(
+  ?opts:Re_posix.opt list -> string -> Re.re
+)
+ident(
+  ext_ref Re_posix.compile_pat
+)
+"bin/git_repo_clean.ml" 49 1252 1285 "bin/git_repo_clean.ml" 49 1252 1289
+type(
+  string
+)
+"bin/git_repo_clean.ml" 49 1252 1263 "bin/git_repo_clean.ml" 49 1252 1290
+call(
+  stack
+)
+type(
+  Re.re
+)
+"bin/git_repo_clean.ml" 49 1252 1254 "bin/git_repo_clean.ml" 49 1252 1290
+call(
+  stack
+)
+type(
+  string -> string list
+)
+"bin/git_repo_clean.ml" 48 1219 1240 "bin/git_repo_clean.ml" 49 1252 1290
+call(
+  tail
+)
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 48 1219 1221 "bin/git_repo_clean.ml" 49 1252 1290
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 47 1185 1187 "bin/git_repo_clean.ml" 49 1252 1290
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 51 1294 1298 "bin/git_repo_clean.ml" 51 1294 1306
+type(
+  unit -> [> `Error of bool * string | `Ok of string list ]
+)
+ident(
+  def get_tags "bin/git_repo_clean.ml" 57 1419 1419 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 51 1294 1307 "bin/git_repo_clean.ml" 51 1294 1309
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 52 1313 1319 "bin/git_repo_clean.ml" 52 1313 1322
+type(
+  string
+)
+ident(
+  def cmd "bin/git_repo_clean.ml" 53 1344 1346 "bin/git_repo_clean.ml" 54 1377 1415
+)
+"bin/git_repo_clean.ml" 52 1313 1325 "bin/git_repo_clean.ml" 52 1313 1340
+type(
+  string
+)
+"bin/git_repo_clean.ml" 53 1344 1346 "bin/git_repo_clean.ml" 53 1344 1359
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 53 1344 1360 "bin/git_repo_clean.ml" 53 1344 1363
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 52 1313 1319 "bin/git_repo_clean.ml" 52 1313 1322
+)
+"bin/git_repo_clean.ml" 53 1344 1346 "bin/git_repo_clean.ml" 53 1344 1363
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 53 1344 1365 "bin/git_repo_clean.ml" 53 1344 1368
+type(
+  string -> [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  ext_ref Shell_utils.run
+)
+"bin/git_repo_clean.ml" 53 1344 1369 "bin/git_repo_clean.ml" 53 1344 1372
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 52 1313 1319 "bin/git_repo_clean.ml" 52 1313 1322
+)
+"bin/git_repo_clean.ml" 53 1344 1365 "bin/git_repo_clean.ml" 53 1344 1372
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 53 1344 1373 "bin/git_repo_clean.ml" 53 1344 1376
+type(
+  [ `Error of bool * string | `Ok of string ] ->
+  (string -> string list) ->
+  ([> `Error of bool * string | `Ok of string list ] as 'a)
+)
+ident(
+  ext_ref Shell_utils.Infix.( >>| )
+)
+"bin/git_repo_clean.ml" 54 1377 1379 "bin/git_repo_clean.ml" 54 1377 1387
+type(
+  ?pos:int -> ?len:int -> Re.re -> string -> string list
+)
+ident(
+  ext_ref Re.split
+)
+"bin/git_repo_clean.ml" 54 1377 1389 "bin/git_repo_clean.ml" 54 1377 1409
+type(
+  ?opts:Re_posix.opt list -> string -> Re.re
+)
+ident(
+  ext_ref Re_posix.compile_pat
+)
+"bin/git_repo_clean.ml" 54 1377 1410 "bin/git_repo_clean.ml" 54 1377 1414
+type(
+  string
+)
+"bin/git_repo_clean.ml" 54 1377 1388 "bin/git_repo_clean.ml" 54 1377 1415
+call(
+  stack
+)
+type(
+  Re.re
+)
+"bin/git_repo_clean.ml" 54 1377 1379 "bin/git_repo_clean.ml" 54 1377 1415
+call(
+  stack
+)
+type(
+  string -> string list
+)
+"bin/git_repo_clean.ml" 53 1344 1365 "bin/git_repo_clean.ml" 54 1377 1415
+call(
+  tail
+)
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 53 1344 1346 "bin/git_repo_clean.ml" 54 1377 1415
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 52 1313 1315 "bin/git_repo_clean.ml" 54 1377 1415
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 57 1419 1423 "bin/git_repo_clean.ml" 57 1419 1443
+type(
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  def delete_branch_or_tag "bin/git_repo_clean.ml" 61 1536 1536 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 57 1419 1444 "bin/git_repo_clean.ml" 57 1419 1447
+type(
+  string
+)
+ident(
+  def url "bin/git_repo_clean.ml" 58 1450 1452 "bin/git_repo_clean.ml" 59 1506 1534
+)
+"bin/git_repo_clean.ml" 58 1450 1456 "bin/git_repo_clean.ml" 58 1450 1459
+type(
+  string
+)
+ident(
+  def cmd "bin/git_repo_clean.ml" 59 1506 1508 "bin/git_repo_clean.ml" 59 1506 1534
+)
+"bin/git_repo_clean.ml" 58 1450 1462 "bin/git_repo_clean.ml" 58 1450 1476
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"bin/git_repo_clean.ml" 58 1450 1477 "bin/git_repo_clean.ml" 58 1450 1498
+type(
+  (string -> string, unit, string) format
+)
+"bin/git_repo_clean.ml" 58 1450 1499 "bin/git_repo_clean.ml" 58 1450 1502
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 57 1419 1444 "bin/git_repo_clean.ml" 57 1419 1447
+)
+"bin/git_repo_clean.ml" 58 1450 1462 "bin/git_repo_clean.ml" 58 1450 1502
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 59 1506 1508 "bin/git_repo_clean.ml" 59 1506 1521
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 59 1506 1522 "bin/git_repo_clean.ml" 59 1506 1525
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 58 1450 1456 "bin/git_repo_clean.ml" 58 1450 1459
+)
+"bin/git_repo_clean.ml" 59 1506 1508 "bin/git_repo_clean.ml" 59 1506 1525
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 59 1506 1527 "bin/git_repo_clean.ml" 59 1506 1530
+type(
+  string -> ([> `Error of bool * string | `Ok of string ] as 'a)
+)
+ident(
+  ext_ref Shell_utils.run
+)
+"bin/git_repo_clean.ml" 59 1506 1531 "bin/git_repo_clean.ml" 59 1506 1534
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 58 1450 1456 "bin/git_repo_clean.ml" 58 1450 1459
+)
+"bin/git_repo_clean.ml" 59 1506 1527 "bin/git_repo_clean.ml" 59 1506 1534
+call(
+  tail
+)
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 59 1506 1508 "bin/git_repo_clean.ml" 59 1506 1534
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 58 1450 1452 "bin/git_repo_clean.ml" 59 1506 1534
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 61 1536 1540 "bin/git_repo_clean.ml" 61 1536 1559
+type(
+  string -> [> `Ok of string ]
+)
+ident(
+  def delete_local_branch "bin/git_repo_clean.ml" 67 1735 1735 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 61 1536 1560 "bin/git_repo_clean.ml" 61 1536 1563
+type(
+  string
+)
+ident(
+  def url "bin/git_repo_clean.ml" 62 1566 1568 "bin/git_repo_clean.ml" 65 1698 1733
+)
+"bin/git_repo_clean.ml" 62 1566 1572 "bin/git_repo_clean.ml" 62 1566 1575
+type(
+  string
+)
+ident(
+  def cmd "bin/git_repo_clean.ml" 63 1619 1621 "bin/git_repo_clean.ml" 65 1698 1733
+)
+"bin/git_repo_clean.ml" 62 1566 1578 "bin/git_repo_clean.ml" 62 1566 1592
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"bin/git_repo_clean.ml" 62 1566 1593 "bin/git_repo_clean.ml" 62 1566 1611
+type(
+  (string -> string, unit, string) format
+)
+"bin/git_repo_clean.ml" 62 1566 1612 "bin/git_repo_clean.ml" 62 1566 1615
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 61 1536 1560 "bin/git_repo_clean.ml" 61 1536 1563
+)
+"bin/git_repo_clean.ml" 62 1566 1578 "bin/git_repo_clean.ml" 62 1566 1615
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 63 1619 1621 "bin/git_repo_clean.ml" 63 1619 1634
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 63 1619 1635 "bin/git_repo_clean.ml" 63 1619 1638
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 62 1566 1572 "bin/git_repo_clean.ml" 62 1566 1575
+)
+"bin/git_repo_clean.ml" 63 1619 1621 "bin/git_repo_clean.ml" 63 1619 1638
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 64 1641 1649 "bin/git_repo_clean.ml" 64 1641 1652
+type(
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  ext_ref Shell_utils.run
+)
+"bin/git_repo_clean.ml" 64 1641 1653 "bin/git_repo_clean.ml" 64 1641 1656
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 62 1566 1572 "bin/git_repo_clean.ml" 62 1566 1575
+)
+"bin/git_repo_clean.ml" 64 1641 1649 "bin/git_repo_clean.ml" 64 1641 1656
+call(
+  stack
+)
+type(
+  [> `Error of bool * string | `Ok of string ] as 'a
+)
+"bin/git_repo_clean.ml" 64 1641 1666 "bin/git_repo_clean.ml" 64 1641 1667
+type(
+  string
+)
+"bin/git_repo_clean.ml" 64 1641 1662 "bin/git_repo_clean.ml" 64 1641 1667
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 64 1641 1671 "bin/git_repo_clean.ml" 64 1641 1672
+ident(
+  def o "bin/git_repo_clean.ml" 64 1641 1676 "bin/git_repo_clean.ml" 64 1641 1677
+)
+"bin/git_repo_clean.ml" 64 1641 1662 "bin/git_repo_clean.ml" 64 1641 1672
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 64 1641 1676 "bin/git_repo_clean.ml" 64 1641 1677
+type(
+  [> `Ok of string ] as 'b
+)
+ident(
+  int_ref o "bin/git_repo_clean.ml" 64 1641 1662 "bin/git_repo_clean.ml" 64 1641 1672
+)
+"bin/git_repo_clean.ml" 64 1641 1688 "bin/git_repo_clean.ml" 64 1641 1689
+type(
+  bool
+)
+"bin/git_repo_clean.ml" 64 1641 1691 "bin/git_repo_clean.ml" 64 1641 1692
+type(
+  string
+)
+ident(
+  def e "bin/git_repo_clean.ml" 65 1698 1702 "bin/git_repo_clean.ml" 65 1698 1733
+)
+"bin/git_repo_clean.ml" 64 1641 1687 "bin/git_repo_clean.ml" 64 1641 1693
+type(
+  bool * string
+)
+"bin/git_repo_clean.ml" 64 1641 1680 "bin/git_repo_clean.ml" 64 1641 1693
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 65 1698 1707 "bin/git_repo_clean.ml" 65 1698 1726
+type(
+  string
+)
+"bin/git_repo_clean.ml" 65 1698 1727 "bin/git_repo_clean.ml" 65 1698 1728
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"bin/git_repo_clean.ml" 65 1698 1729 "bin/git_repo_clean.ml" 65 1698 1732
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 61 1536 1560 "bin/git_repo_clean.ml" 61 1536 1563
+)
+"bin/git_repo_clean.ml" 65 1698 1706 "bin/git_repo_clean.ml" 65 1698 1733
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 65 1698 1702 "bin/git_repo_clean.ml" 65 1698 1733
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 64 1641 1643 "bin/git_repo_clean.ml" 65 1698 1733
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 63 1619 1621 "bin/git_repo_clean.ml" 65 1698 1733
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 62 1566 1568 "bin/git_repo_clean.ml" 65 1698 1733
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 67 1735 1739 "bin/git_repo_clean.ml" 67 1735 1755
+type(
+  string -> [> `Ok of string ]
+)
+ident(
+  def delete_local_tag "bin/git_repo_clean.ml" 74 1926 1926 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 67 1735 1756 "bin/git_repo_clean.ml" 67 1735 1759
+type(
+  string
+)
+ident(
+  def url "bin/git_repo_clean.ml" 68 1762 1764 "bin/git_repo_clean.ml" 71 1891 1923
+)
+"bin/git_repo_clean.ml" 68 1762 1768 "bin/git_repo_clean.ml" 68 1762 1771
+type(
+  string
+)
+ident(
+  def cmd "bin/git_repo_clean.ml" 69 1813 1815 "bin/git_repo_clean.ml" 71 1891 1923
+)
+"bin/git_repo_clean.ml" 68 1762 1774 "bin/git_repo_clean.ml" 68 1762 1788
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"bin/git_repo_clean.ml" 68 1762 1789 "bin/git_repo_clean.ml" 68 1762 1804
+type(
+  (string -> string, unit, string) format
+)
+"bin/git_repo_clean.ml" 68 1762 1805 "bin/git_repo_clean.ml" 68 1762 1808
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 67 1735 1756 "bin/git_repo_clean.ml" 67 1735 1759
+)
+"bin/git_repo_clean.ml" 68 1762 1774 "bin/git_repo_clean.ml" 68 1762 1808
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 69 1813 1815 "bin/git_repo_clean.ml" 69 1813 1828
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 69 1813 1829 "bin/git_repo_clean.ml" 69 1813 1832
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 68 1762 1768 "bin/git_repo_clean.ml" 68 1762 1771
+)
+"bin/git_repo_clean.ml" 69 1813 1815 "bin/git_repo_clean.ml" 69 1813 1832
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 70 1834 1842 "bin/git_repo_clean.ml" 70 1834 1845
+type(
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  ext_ref Shell_utils.run
+)
+"bin/git_repo_clean.ml" 70 1834 1846 "bin/git_repo_clean.ml" 70 1834 1849
+type(
+  string
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 68 1762 1768 "bin/git_repo_clean.ml" 68 1762 1771
+)
+"bin/git_repo_clean.ml" 70 1834 1842 "bin/git_repo_clean.ml" 70 1834 1849
+call(
+  stack
+)
+type(
+  [> `Error of bool * string | `Ok of string ] as 'a
+)
+"bin/git_repo_clean.ml" 70 1834 1859 "bin/git_repo_clean.ml" 70 1834 1860
+type(
+  string
+)
+"bin/git_repo_clean.ml" 70 1834 1855 "bin/git_repo_clean.ml" 70 1834 1860
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 70 1834 1864 "bin/git_repo_clean.ml" 70 1834 1865
+ident(
+  def o "bin/git_repo_clean.ml" 70 1834 1869 "bin/git_repo_clean.ml" 70 1834 1870
+)
+"bin/git_repo_clean.ml" 70 1834 1855 "bin/git_repo_clean.ml" 70 1834 1865
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 70 1834 1869 "bin/git_repo_clean.ml" 70 1834 1870
+type(
+  [> `Ok of string ] as 'b
+)
+ident(
+  int_ref o "bin/git_repo_clean.ml" 70 1834 1855 "bin/git_repo_clean.ml" 70 1834 1865
+)
+"bin/git_repo_clean.ml" 70 1834 1881 "bin/git_repo_clean.ml" 70 1834 1882
+type(
+  bool
+)
+"bin/git_repo_clean.ml" 70 1834 1884 "bin/git_repo_clean.ml" 70 1834 1885
+type(
+  string
+)
+ident(
+  def e "bin/git_repo_clean.ml" 71 1891 1895 "bin/git_repo_clean.ml" 71 1891 1923
+)
+"bin/git_repo_clean.ml" 70 1834 1880 "bin/git_repo_clean.ml" 70 1834 1886
+type(
+  bool * string
+)
+"bin/git_repo_clean.ml" 70 1834 1873 "bin/git_repo_clean.ml" 70 1834 1886
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 71 1891 1900 "bin/git_repo_clean.ml" 71 1891 1916
+type(
+  string
+)
+"bin/git_repo_clean.ml" 71 1891 1917 "bin/git_repo_clean.ml" 71 1891 1918
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"bin/git_repo_clean.ml" 71 1891 1919 "bin/git_repo_clean.ml" 71 1891 1922
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 67 1735 1756 "bin/git_repo_clean.ml" 67 1735 1759
+)
+"bin/git_repo_clean.ml" 71 1891 1899 "bin/git_repo_clean.ml" 71 1891 1923
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 71 1891 1895 "bin/git_repo_clean.ml" 71 1891 1923
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 70 1834 1836 "bin/git_repo_clean.ml" 71 1891 1923
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 69 1813 1815 "bin/git_repo_clean.ml" 71 1891 1923
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 68 1762 1764 "bin/git_repo_clean.ml" 71 1891 1923
+type(
+  'b
+)
+"bin/git_repo_clean.ml" 74 1926 1930 "bin/git_repo_clean.ml" 74 1926 1942
+type(
+  string -> string
+)
+ident(
+  def strip_origin "bin/git_repo_clean.ml" 80 2047 2047 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 74 1926 1943 "bin/git_repo_clean.ml" 74 1926 1946
+type(
+  string
+)
+ident(
+  def url "bin/git_repo_clean.ml" 75 1949 1951 "bin/git_repo_clean.ml" 77 2030 2042
+)
+"bin/git_repo_clean.ml" 75 1949 1957 "bin/git_repo_clean.ml" 75 1949 1965
+type(
+  ?pos:int -> ?len:int -> Re.re -> string -> string list
+)
+ident(
+  ext_ref Re.split
+)
+"bin/git_repo_clean.ml" 75 1949 1967 "bin/git_repo_clean.ml" 75 1949 1987
+type(
+  ?opts:Re_posix.opt list -> string -> Re.re
+)
+ident(
+  ext_ref Re_posix.compile_pat
+)
+"bin/git_repo_clean.ml" 75 1949 1988 "bin/git_repo_clean.ml" 75 1949 1997
+type(
+  string
+)
+"bin/git_repo_clean.ml" 75 1949 1966 "bin/git_repo_clean.ml" 75 1949 1998
+call(
+  stack
+)
+type(
+  Re.re
+)
+"bin/git_repo_clean.ml" 75 1949 1999 "bin/git_repo_clean.ml" 75 1949 2002
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 74 1926 1943 "bin/git_repo_clean.ml" 74 1926 1946
+)
+"bin/git_repo_clean.ml" 75 1949 1957 "bin/git_repo_clean.ml" 75 1949 2002
+call(
+  stack
+)
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 76 2008 2013 "bin/git_repo_clean.ml" 76 2008 2014
+type(
+  string
+)
+"bin/git_repo_clean.ml" 76 2008 2015 "bin/git_repo_clean.ml" 76 2008 2019
+type(
+  string
+)
+ident(
+  def rest "bin/git_repo_clean.ml" 76 2008 2024 "bin/git_repo_clean.ml" 76 2008 2028
+)
+"bin/git_repo_clean.ml" 76 2008 2012 "bin/git_repo_clean.ml" 76 2008 2020
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 76 2008 2024 "bin/git_repo_clean.ml" 76 2008 2028
+type(
+  string
+)
+ident(
+  int_ref rest "bin/git_repo_clean.ml" 76 2008 2015 "bin/git_repo_clean.ml" 76 2008 2019
+)
+"bin/git_repo_clean.ml" 77 2030 2034 "bin/git_repo_clean.ml" 77 2030 2035
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 77 2030 2039 "bin/git_repo_clean.ml" 77 2030 2042
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 74 1926 1943 "bin/git_repo_clean.ml" 74 1926 1946
+)
+"bin/git_repo_clean.ml" 75 1949 1951 "bin/git_repo_clean.ml" 77 2030 2042
+type(
+  string
+)
+"bin/git_repo_clean.ml" 80 2047 2051 "bin/git_repo_clean.ml" 80 2047 2054
+type(
+  string ->
+  bool ->
+  bool ->
+  bool ->
+  bool ->
+  [> `Error of bool * string
+   | `Ok of [ `Error of bool * string | `Ok of string ] ]
+)
+ident(
+  def run "bin/git_repo_clean.ml" 98 3031 3031 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 80 2047 2055 "bin/git_repo_clean.ml" 80 2047 2062
+type(
+  string
+)
+ident(
+  def pattern "bin/git_repo_clean.ml" 80 2047 2063 "bin/git_repo_clean.ml" 96 3017 3029
+)
+"bin/git_repo_clean.ml" 80 2047 2063 "bin/git_repo_clean.ml" 80 2047 2071
+type(
+  bool
+)
+ident(
+  def for_tags "bin/git_repo_clean.ml" 80 2047 2072 "bin/git_repo_clean.ml" 96 3017 3029
+)
+"bin/git_repo_clean.ml" 80 2047 2072 "bin/git_repo_clean.ml" 80 2047 2082
+type(
+  bool
+)
+ident(
+  def local_only "bin/git_repo_clean.ml" 80 2047 2083 "bin/git_repo_clean.ml" 96 3017 3029
+)
+"bin/git_repo_clean.ml" 80 2047 2083 "bin/git_repo_clean.ml" 80 2047 2094
+type(
+  bool
+)
+ident(
+  def remote_only "bin/git_repo_clean.ml" 80 2047 2095 "bin/git_repo_clean.ml" 96 3017 3029
+)
+"bin/git_repo_clean.ml" 80 2047 2095 "bin/git_repo_clean.ml" 80 2047 2108
+type(
+  bool
+)
+ident(
+  def stop_on_error "bin/git_repo_clean.ml" 81 2111 2113 "bin/git_repo_clean.ml" 96 3017 3029
+)
+"bin/git_repo_clean.ml" 81 2111 2116 "bin/git_repo_clean.ml" 81 2111 2126
+type(
+  bool
+)
+ident(
+  int_ref local_only "bin/git_repo_clean.ml" 80 2047 2072 "bin/git_repo_clean.ml" 80 2047 2082
+)
+"bin/git_repo_clean.ml" 81 2111 2127 "bin/git_repo_clean.ml" 81 2111 2129
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"bin/git_repo_clean.ml" 81 2111 2130 "bin/git_repo_clean.ml" 81 2111 2141
+type(
+  bool
+)
+ident(
+  int_ref remote_only "bin/git_repo_clean.ml" 80 2047 2083 "bin/git_repo_clean.ml" 80 2047 2094
+)
+"bin/git_repo_clean.ml" 81 2111 2116 "bin/git_repo_clean.ml" 81 2111 2141
+type(
+  bool
+)
+"bin/git_repo_clean.ml" 81 2111 2155 "bin/git_repo_clean.ml" 81 2111 2160
+type(
+  bool
+)
+"bin/git_repo_clean.ml" 81 2111 2162 "bin/git_repo_clean.ml" 82 2190 2213
+type(
+  string
+)
+"bin/git_repo_clean.ml" 81 2111 2154 "bin/git_repo_clean.ml" 82 2190 2214
+type(
+  bool * string
+)
+"bin/git_repo_clean.ml" 81 2111 2147 "bin/git_repo_clean.ml" 82 2190 2214
+type(
+  [> `Error of bool * string
+   | `Ok of [ `Error of bool * string | `Ok of string ] ]
+  as 'a
+)
+"bin/git_repo_clean.ml" 83 2220 2226 "bin/git_repo_clean.ml" 83 2220 2233
+type(
+  string -> string list
+)
+ident(
+  def matches "bin/git_repo_clean.ml" 84 2282 2284 "bin/git_repo_clean.ml" 96 3017 3029
+)
+"bin/git_repo_clean.ml" 83 2220 2236 "bin/git_repo_clean.ml" 83 2220 2246
+type(
+  ?pos:int -> ?len:int -> Re.re -> string -> string list
+)
+ident(
+  ext_ref Re.matches
+)
+"bin/git_repo_clean.ml" 83 2220 2247 "bin/git_repo_clean.ml" 83 2220 2249
+type(
+  (Re.re -> string -> string list) -> Re.re -> string -> string list
+)
+ident(
+  ext_ref Pervasives.( @@ )
+)
+"bin/git_repo_clean.ml" 83 2220 2250 "bin/git_repo_clean.ml" 83 2220 2270
+type(
+  ?opts:Re_posix.opt list -> string -> Re.re
+)
+ident(
+  ext_ref Re_posix.compile_pat
+)
+"bin/git_repo_clean.ml" 83 2220 2271 "bin/git_repo_clean.ml" 83 2220 2278
+type(
+  string
+)
+ident(
+  int_ref pattern "bin/git_repo_clean.ml" 80 2047 2055 "bin/git_repo_clean.ml" 80 2047 2062
+)
+"bin/git_repo_clean.ml" 83 2220 2250 "bin/git_repo_clean.ml" 83 2220 2278
+call(
+  stack
+)
+type(
+  Re.re
+)
+"bin/git_repo_clean.ml" 83 2220 2236 "bin/git_repo_clean.ml" 83 2220 2278
+call(
+  stack
+)
+type(
+  string -> string list
+)
+"bin/git_repo_clean.ml" 84 2282 2293 "bin/git_repo_clean.ml" 84 2282 2301
+type(
+  bool
+)
+ident(
+  int_ref for_tags "bin/git_repo_clean.ml" 80 2047 2063 "bin/git_repo_clean.ml" 80 2047 2071
+)
+"bin/git_repo_clean.ml" 84 2282 2307 "bin/git_repo_clean.ml" 84 2282 2315
+type(
+  unit -> [ `Error of bool * string | `Ok of string CCList.t ]
+)
+ident(
+  int_ref get_tags "bin/git_repo_clean.ml" 51 1294 1298 "bin/git_repo_clean.ml" 51 1294 1306
+)
+"bin/git_repo_clean.ml" 84 2282 2316 "bin/git_repo_clean.ml" 84 2282 2318
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 84 2282 2307 "bin/git_repo_clean.ml" 84 2282 2318
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string CCList.t ]
+)
+"bin/git_repo_clean.ml" 84 2282 2324 "bin/git_repo_clean.ml" 84 2282 2336
+type(
+  unit -> [ `Error of bool * string | `Ok of string CCList.t ]
+)
+ident(
+  int_ref get_branches "bin/git_repo_clean.ml" 46 1163 1167 "bin/git_repo_clean.ml" 46 1163 1179
+)
+"bin/git_repo_clean.ml" 84 2282 2337 "bin/git_repo_clean.ml" 84 2282 2339
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 84 2282 2324 "bin/git_repo_clean.ml" 84 2282 2339
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string CCList.t ]
+)
+"bin/git_repo_clean.ml" 84 2282 2284 "bin/git_repo_clean.ml" 84 2282 2343
+type(
+  [ `Error of bool * string | `Ok of string CCList.t ]
+)
+"bin/git_repo_clean.ml" 84 2282 2344 "bin/git_repo_clean.ml" 84 2282 2347
+type(
+  [ `Error of bool * string | `Ok of string CCList.t ] ->
+  (string CCList.t -> [ `Error of bool * string | `Ok of string ]) -> 'a
+)
+ident(
+  ext_ref Shell_utils.Infix.( >>| )
+)
+"bin/git_repo_clean.ml" 85 2348 2350 "bin/git_repo_clean.ml" 85 2348 2367
+type(
+  ([ `Error of bool * string | `Ok of string ] ->
+   string ->
+   [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]) ->
+  [ `Error of bool * string | `Ok of string ] ->
+  string CCList.t -> [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  ext_ref CCList.fold_while
+)
+"bin/git_repo_clean.ml" 85 2348 2373 "bin/git_repo_clean.ml" 85 2348 2376
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  def res "bin/git_repo_clean.ml" 85 2348 2377 "bin/git_repo_clean.ml" 95 2990 3015
+)
+"bin/git_repo_clean.ml" 85 2348 2377 "bin/git_repo_clean.ml" 85 2348 2380
+type(
+  string
+)
+ident(
+  def url "bin/git_repo_clean.ml" 86 2384 2390 "bin/git_repo_clean.ml" 95 2990 3015
+)
+"bin/git_repo_clean.ml" 86 2384 2396 "bin/git_repo_clean.ml" 86 2384 2399
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref res "bin/git_repo_clean.ml" 85 2348 2373 "bin/git_repo_clean.ml" 85 2348 2376
+)
+"bin/git_repo_clean.ml" 86 2384 2412 "bin/git_repo_clean.ml" 86 2384 2413
+type(
+  bool * string
+)
+"bin/git_repo_clean.ml" 86 2384 2405 "bin/git_repo_clean.ml" 86 2384 2413
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 86 2384 2417 "bin/git_repo_clean.ml" 86 2384 2418
+ident(
+  def e "bin/git_repo_clean.ml" 86 2384 2422 "bin/git_repo_clean.ml" 86 2384 2463
+)
+"bin/git_repo_clean.ml" 86 2384 2405 "bin/git_repo_clean.ml" 86 2384 2418
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 86 2384 2428 "bin/git_repo_clean.ml" 86 2384 2441
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 86 2384 2442 "bin/git_repo_clean.ml" 86 2384 2450
+type(
+  string
+)
+"bin/git_repo_clean.ml" 86 2384 2428 "bin/git_repo_clean.ml" 86 2384 2450
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 86 2384 2451 "bin/git_repo_clean.ml" 86 2384 2452
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref e "bin/git_repo_clean.ml" 86 2384 2405 "bin/git_repo_clean.ml" 86 2384 2418
+)
+"bin/git_repo_clean.ml" 86 2384 2454 "bin/git_repo_clean.ml" 86 2384 2459
+type(
+  [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 86 2384 2451 "bin/git_repo_clean.ml" 86 2384 2459
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 86 2384 2422 "bin/git_repo_clean.ml" 86 2384 2463
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 87 2464 2476 "bin/git_repo_clean.ml" 87 2464 2477
+type(
+  string
+)
+"bin/git_repo_clean.ml" 87 2464 2472 "bin/git_repo_clean.ml" 87 2464 2477
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 87 2464 2487 "bin/git_repo_clean.ml" 87 2464 2500
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 87 2464 2501 "bin/git_repo_clean.ml" 87 2464 2503
+type(
+  (string -> unit) -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( @@ )
+)
+"bin/git_repo_clean.ml" 87 2464 2504 "bin/git_repo_clean.ml" 87 2464 2522
+type(
+  string
+)
+"bin/git_repo_clean.ml" 87 2464 2523 "bin/git_repo_clean.ml" 87 2464 2524
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"bin/git_repo_clean.ml" 87 2464 2525 "bin/git_repo_clean.ml" 87 2464 2528
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 85 2348 2377 "bin/git_repo_clean.ml" 85 2348 2380
+)
+"bin/git_repo_clean.ml" 87 2464 2504 "bin/git_repo_clean.ml" 87 2464 2528
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 87 2464 2487 "bin/git_repo_clean.ml" 87 2464 2528
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 88 2530 2542 "bin/git_repo_clean.ml" 88 2530 2549
+type(
+  string -> string list
+)
+ident(
+  int_ref matches "bin/git_repo_clean.ml" 83 2220 2226 "bin/git_repo_clean.ml" 83 2220 2233
+)
+"bin/git_repo_clean.ml" 88 2530 2550 "bin/git_repo_clean.ml" 88 2530 2553
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 85 2348 2377 "bin/git_repo_clean.ml" 85 2348 2380
+)
+"bin/git_repo_clean.ml" 88 2530 2542 "bin/git_repo_clean.ml" 88 2530 2553
+call(
+  stack
+)
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 88 2530 2559 "bin/git_repo_clean.ml" 88 2530 2561
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 88 2530 2565 "bin/git_repo_clean.ml" 88 2530 2568
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref res "bin/git_repo_clean.ml" 85 2348 2373 "bin/git_repo_clean.ml" 85 2348 2376
+)
+"bin/git_repo_clean.ml" 88 2530 2570 "bin/git_repo_clean.ml" 88 2530 2579
+type(
+  [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 88 2530 2565 "bin/git_repo_clean.ml" 88 2530 2579
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 89 2580 2588 "bin/git_repo_clean.ml" 89 2580 2589
+type(
+  string list
+)
+"bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+type(
+  string
+)
+ident(
+  def url "bin/git_repo_clean.ml" 90 2623 2631 "bin/git_repo_clean.ml" 95 2990 3011
+)
+"bin/git_repo_clean.ml" 89 2580 2603 "bin/git_repo_clean.ml" 89 2580 2615
+type(
+  string -> string
+)
+ident(
+  int_ref strip_origin "bin/git_repo_clean.ml" 74 1926 1930 "bin/git_repo_clean.ml" 74 1926 1942
+)
+"bin/git_repo_clean.ml" 89 2580 2616 "bin/git_repo_clean.ml" 89 2580 2619
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 85 2348 2377 "bin/git_repo_clean.ml" 85 2348 2380
+)
+"bin/git_repo_clean.ml" 89 2580 2603 "bin/git_repo_clean.ml" 89 2580 2619
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 90 2623 2635 "bin/git_repo_clean.ml" 90 2623 2639
+type(
+  [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  def res' "bin/git_repo_clean.ml" 95 2990 2996 "bin/git_repo_clean.ml" 95 2990 3011
+)
+"bin/git_repo_clean.ml" 90 2623 2651 "bin/git_repo_clean.ml" 90 2623 2654
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"bin/git_repo_clean.ml" 90 2623 2655 "bin/git_repo_clean.ml" 90 2623 2665
+type(
+  bool
+)
+ident(
+  int_ref local_only "bin/git_repo_clean.ml" 80 2047 2072 "bin/git_repo_clean.ml" 80 2047 2082
+)
+"bin/git_repo_clean.ml" 90 2623 2651 "bin/git_repo_clean.ml" 90 2623 2665
+type(
+  bool
+)
+"bin/git_repo_clean.ml" 91 2671 2689 "bin/git_repo_clean.ml" 91 2671 2709
+type(
+  string -> [> `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref delete_branch_or_tag "bin/git_repo_clean.ml" 57 1419 1423 "bin/git_repo_clean.ml" 57 1419 1443
+)
+"bin/git_repo_clean.ml" 91 2671 2710 "bin/git_repo_clean.ml" 91 2671 2713
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+)
+"bin/git_repo_clean.ml" 91 2671 2689 "bin/git_repo_clean.ml" 91 2671 2713
+call(
+  stack
+)
+type(
+  [> `Error of bool * string | `Ok of string ] as 'b
+)
+"bin/git_repo_clean.ml" 91 2671 2726 "bin/git_repo_clean.ml" 91 2671 2727
+type(
+  bool * string
+)
+"bin/git_repo_clean.ml" 91 2671 2719 "bin/git_repo_clean.ml" 91 2671 2727
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 91 2671 2731 "bin/git_repo_clean.ml" 91 2671 2732
+ident(
+  def e "bin/git_repo_clean.ml" 91 2671 2736 "bin/git_repo_clean.ml" 92 2739 2802
+)
+"bin/git_repo_clean.ml" 91 2671 2719 "bin/git_repo_clean.ml" 91 2671 2732
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 92 2739 2753 "bin/git_repo_clean.ml" 92 2739 2766
+type(
+  bool
+)
+ident(
+  int_ref stop_on_error "bin/git_repo_clean.ml" 80 2047 2095 "bin/git_repo_clean.ml" 80 2047 2108
+)
+"bin/git_repo_clean.ml" 92 2739 2772 "bin/git_repo_clean.ml" 92 2739 2773
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref e "bin/git_repo_clean.ml" 91 2671 2719 "bin/git_repo_clean.ml" 91 2671 2732
+)
+"bin/git_repo_clean.ml" 92 2739 2784 "bin/git_repo_clean.ml" 92 2739 2795
+type(
+  string
+)
+"bin/git_repo_clean.ml" 92 2739 2796 "bin/git_repo_clean.ml" 92 2739 2797
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"bin/git_repo_clean.ml" 92 2739 2798 "bin/git_repo_clean.ml" 92 2739 2801
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+)
+"bin/git_repo_clean.ml" 92 2739 2783 "bin/git_repo_clean.ml" 92 2739 2802
+call(
+  stack
+)
+type(
+  string
+)
+"bin/git_repo_clean.ml" 92 2739 2779 "bin/git_repo_clean.ml" 92 2739 2802
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 91 2671 2736 "bin/git_repo_clean.ml" 92 2739 2802
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 92 2739 2809 "bin/git_repo_clean.ml" 92 2739 2810
+type(
+  string
+)
+"bin/git_repo_clean.ml" 92 2739 2805 "bin/git_repo_clean.ml" 92 2739 2810
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 92 2739 2814 "bin/git_repo_clean.ml" 92 2739 2815
+ident(
+  def o "bin/git_repo_clean.ml" 92 2739 2819 "bin/git_repo_clean.ml" 92 2739 2820
+)
+"bin/git_repo_clean.ml" 92 2739 2805 "bin/git_repo_clean.ml" 92 2739 2815
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 92 2739 2819 "bin/git_repo_clean.ml" 92 2739 2820
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref o "bin/git_repo_clean.ml" 92 2739 2805 "bin/git_repo_clean.ml" 92 2739 2815
+)
+"bin/git_repo_clean.ml" 91 2671 2683 "bin/git_repo_clean.ml" 92 2739 2820
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 92 2739 2830 "bin/git_repo_clean.ml" 92 2739 2833
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+)
+"bin/git_repo_clean.ml" 92 2739 2826 "bin/git_repo_clean.ml" 92 2739 2833
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 90 2623 2642 "bin/git_repo_clean.ml" 92 2739 2837
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 92 2739 2838 "bin/git_repo_clean.ml" 92 2739 2841
+type(
+  [ `Error of bool * string | `Ok of string ] ->
+  (string -> ([> `Error of bool * string | `Ok of string ] as 'c)) -> 'c
+)
+ident(
+  ext_ref Shell_utils.Infix.( >>= )
+)
+"bin/git_repo_clean.ml" 93 2842 2856 "bin/git_repo_clean.ml" 93 2842 2857
+type(
+  string
+)
+"bin/git_repo_clean.ml" 93 2842 2870 "bin/git_repo_clean.ml" 93 2842 2878
+type(
+  bool
+)
+ident(
+  int_ref for_tags "bin/git_repo_clean.ml" 80 2047 2063 "bin/git_repo_clean.ml" 80 2047 2071
+)
+"bin/git_repo_clean.ml" 93 2842 2884 "bin/git_repo_clean.ml" 93 2842 2900
+type(
+  string -> 'c
+)
+ident(
+  int_ref delete_local_tag "bin/git_repo_clean.ml" 67 1735 1739 "bin/git_repo_clean.ml" 67 1735 1755
+)
+"bin/git_repo_clean.ml" 93 2842 2901 "bin/git_repo_clean.ml" 93 2842 2904
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+)
+"bin/git_repo_clean.ml" 93 2842 2884 "bin/git_repo_clean.ml" 93 2842 2904
+call(
+  tail
+)
+type(
+  'c
+)
+"bin/git_repo_clean.ml" 94 2910 2925 "bin/git_repo_clean.ml" 94 2910 2928
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"bin/git_repo_clean.ml" 94 2910 2929 "bin/git_repo_clean.ml" 94 2910 2940
+type(
+  bool
+)
+ident(
+  int_ref remote_only "bin/git_repo_clean.ml" 80 2047 2083 "bin/git_repo_clean.ml" 80 2047 2094
+)
+"bin/git_repo_clean.ml" 94 2910 2925 "bin/git_repo_clean.ml" 94 2910 2940
+type(
+  bool
+)
+"bin/git_repo_clean.ml" 94 2910 2946 "bin/git_repo_clean.ml" 94 2910 2965
+type(
+  string -> 'c
+)
+ident(
+  int_ref delete_local_branch "bin/git_repo_clean.ml" 61 1536 1540 "bin/git_repo_clean.ml" 61 1536 1559
+)
+"bin/git_repo_clean.ml" 94 2910 2966 "bin/git_repo_clean.ml" 94 2910 2969
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+)
+"bin/git_repo_clean.ml" 94 2910 2946 "bin/git_repo_clean.ml" 94 2910 2969
+call(
+  tail
+)
+type(
+  'c
+)
+"bin/git_repo_clean.ml" 94 2910 2979 "bin/git_repo_clean.ml" 94 2910 2982
+type(
+  string
+)
+ident(
+  int_ref url "bin/git_repo_clean.ml" 89 2580 2597 "bin/git_repo_clean.ml" 89 2580 2600
+)
+"bin/git_repo_clean.ml" 94 2910 2975 "bin/git_repo_clean.ml" 94 2910 2982
+type(
+  'c
+)
+"bin/git_repo_clean.ml" 94 2910 2922 "bin/git_repo_clean.ml" 94 2910 2982
+type(
+  'c
+)
+"bin/git_repo_clean.ml" 93 2842 2861 "bin/git_repo_clean.ml" 94 2910 2986
+type(
+  'c
+)
+"bin/git_repo_clean.ml" 93 2842 2852 "bin/git_repo_clean.ml" 94 2910 2986
+type(
+  string -> 'c
+)
+"bin/git_repo_clean.ml" 90 2623 2642 "bin/git_repo_clean.ml" 94 2910 2986
+call(
+  stack
+)
+type(
+  'c
+)
+"bin/git_repo_clean.ml" 95 2990 2996 "bin/git_repo_clean.ml" 95 2990 3000
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+ident(
+  int_ref res' "bin/git_repo_clean.ml" 90 2623 2635 "bin/git_repo_clean.ml" 90 2623 2639
+)
+"bin/git_repo_clean.ml" 95 2990 3002 "bin/git_repo_clean.ml" 95 2990 3011
+type(
+  [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 95 2990 2996 "bin/git_repo_clean.ml" 95 2990 3011
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 90 2623 2631 "bin/git_repo_clean.ml" 95 2990 3011
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 89 2580 2593 "bin/git_repo_clean.ml" 95 2990 3011
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 88 2530 2536 "bin/git_repo_clean.ml" 95 2990 3011
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 87 2464 2481 "bin/git_repo_clean.ml" 95 2990 3015
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 86 2384 2390 "bin/git_repo_clean.ml" 95 2990 3015
+type(
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 85 2348 2368 "bin/git_repo_clean.ml" 95 2990 3016
+type(
+  [ `Error of bool * string | `Ok of string ] ->
+  string ->
+  [ `Error of bool * string | `Ok of string ] * [ `Continue | `Stop ]
+)
+"bin/git_repo_clean.ml" 96 3017 3026 "bin/git_repo_clean.ml" 96 3017 3028
+type(
+  string
+)
+"bin/git_repo_clean.ml" 96 3017 3021 "bin/git_repo_clean.ml" 96 3017 3029
+type(
+  [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 85 2348 2350 "bin/git_repo_clean.ml" 96 3017 3029
+call(
+  stack
+)
+type(
+  string CCList.t -> [ `Error of bool * string | `Ok of string ]
+)
+"bin/git_repo_clean.ml" 84 2282 2284 "bin/git_repo_clean.ml" 96 3017 3029
+call(
+  tail
+)
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 83 2220 2222 "bin/git_repo_clean.ml" 96 3017 3029
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 81 2111 2113 "bin/git_repo_clean.ml" 96 3017 3029
+type(
+  'a
+)
+"bin/git_repo_clean.ml" 98 3031 3035 "bin/git_repo_clean.ml" 98 3031 3038
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t *
+  Cmdliner.Term.info
+)
+ident(
+  def cmd "bin/git_repo_clean.ml" 103 3260 3260 "bin/git_repo_clean.ml" 1 0 -1
+)
+"bin/git_repo_clean.ml" 99 3041 3047 "bin/git_repo_clean.ml" 99 3041 3050
+type(
+  string
+)
+ident(
+  def doc "bin/git_repo_clean.ml" 100 3120 3122 "bin/git_repo_clean.ml" 101 3209 3257
+)
+"bin/git_repo_clean.ml" 99 3041 3053 "bin/git_repo_clean.ml" 99 3041 3116
+type(
+  string
+)
+"bin/git_repo_clean.ml" 100 3120 3128 "bin/git_repo_clean.ml" 100 3120 3131
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret
+  Cmdliner.Term.t ->
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.ret
+)
+"bin/git_repo_clean.ml" 100 3120 3133 "bin/git_repo_clean.ml" 100 3120 3137
+type(
+  (string ->
+   bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret) ->
+  (string ->
+   bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.pure
+)
+"bin/git_repo_clean.ml" 100 3120 3138 "bin/git_repo_clean.ml" 100 3120 3141
+type(
+  string ->
+  bool ->
+  bool ->
+  bool ->
+  bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret
+)
+ident(
+  int_ref run "bin/git_repo_clean.ml" 80 2047 2051 "bin/git_repo_clean.ml" 80 2047 2054
+)
+"bin/git_repo_clean.ml" 100 3120 3133 "bin/git_repo_clean.ml" 100 3120 3141
+call(
+  stack
+)
+type(
+  (string ->
+   bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 100 3120 3142 "bin/git_repo_clean.ml" 100 3120 3143
+type(
+  (string ->
+   bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t ->
+  string Cmdliner.Term.t ->
+  (bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.( $ )
+)
+"bin/git_repo_clean.ml" 100 3120 3144 "bin/git_repo_clean.ml" 100 3120 3151
+type(
+  string Cmdliner.Term.t
+)
+ident(
+  int_ref pattern "bin/git_repo_clean.ml" 17 374 378 "bin/git_repo_clean.ml" 17 374 385
+)
+"bin/git_repo_clean.ml" 100 3120 3133 "bin/git_repo_clean.ml" 100 3120 3151
+call(
+  stack
+)
+type(
+  (bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 100 3120 3152 "bin/git_repo_clean.ml" 100 3120 3153
+type(
+  (bool ->
+   bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t ->
+  bool Cmdliner.Term.t ->
+  (bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.( $ )
+)
+"bin/git_repo_clean.ml" 100 3120 3154 "bin/git_repo_clean.ml" 100 3120 3162
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  int_ref for_tags "bin/git_repo_clean.ml" 22 550 554 "bin/git_repo_clean.ml" 22 550 562
+)
+"bin/git_repo_clean.ml" 100 3120 3133 "bin/git_repo_clean.ml" 100 3120 3162
+call(
+  stack
+)
+type(
+  (bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 100 3120 3163 "bin/git_repo_clean.ml" 100 3120 3164
+type(
+  (bool ->
+   bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t ->
+  bool Cmdliner.Term.t ->
+  (bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.( $ )
+)
+"bin/git_repo_clean.ml" 100 3120 3165 "bin/git_repo_clean.ml" 100 3120 3175
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  int_ref local_only "bin/git_repo_clean.ml" 27 676 680 "bin/git_repo_clean.ml" 27 676 690
+)
+"bin/git_repo_clean.ml" 100 3120 3133 "bin/git_repo_clean.ml" 100 3120 3175
+call(
+  stack
+)
+type(
+  (bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 100 3120 3176 "bin/git_repo_clean.ml" 100 3120 3177
+type(
+  (bool ->
+   bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t ->
+  bool Cmdliner.Term.t ->
+  (bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.( $ )
+)
+"bin/git_repo_clean.ml" 100 3120 3178 "bin/git_repo_clean.ml" 100 3120 3189
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  int_ref remote_only "bin/git_repo_clean.ml" 32 809 813 "bin/git_repo_clean.ml" 32 809 824
+)
+"bin/git_repo_clean.ml" 100 3120 3133 "bin/git_repo_clean.ml" 100 3120 3189
+call(
+  stack
+)
+type(
+  (bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 100 3120 3190 "bin/git_repo_clean.ml" 100 3120 3191
+type(
+  (bool -> [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret)
+  Cmdliner.Term.t ->
+  bool Cmdliner.Term.t ->
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret
+  Cmdliner.Term.t
+)
+ident(
+  ext_ref Cmdliner.Term.( $ )
+)
+"bin/git_repo_clean.ml" 100 3120 3192 "bin/git_repo_clean.ml" 100 3120 3205
+type(
+  bool Cmdliner.Term.t
+)
+ident(
+  int_ref stop_on_error "bin/git_repo_clean.ml" 37 945 949 "bin/git_repo_clean.ml" 37 945 962
+)
+"bin/git_repo_clean.ml" 100 3120 3132 "bin/git_repo_clean.ml" 100 3120 3206
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.ret
+  Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 100 3120 3128 "bin/git_repo_clean.ml" 100 3120 3206
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t
+)
+"bin/git_repo_clean.ml" 101 3209 3211 "bin/git_repo_clean.ml" 101 3209 3220
+type(
+  ?sdocs:string ->
+  ?man:Cmdliner.Manpage.block list ->
+  ?docs:string ->
+  ?doc:string -> ?version:string -> string -> Cmdliner.Term.info
+)
+ident(
+  ext_ref Cmdliner.Term.info
+)
+"bin/git_repo_clean.ml" 101 3209 3221 "bin/git_repo_clean.ml" 101 3209 3237
+type(
+  string
+)
+"bin/git_repo_clean.ml" 101 3209 3247 "bin/git_repo_clean.ml" 101 3209 3252
+type(
+  string
+)
+"bin/git_repo_clean.ml" 101 3209 3254 "bin/git_repo_clean.ml" 101 3209 3257
+type(
+  string
+)
+ident(
+  int_ref doc "bin/git_repo_clean.ml" 99 3041 3047 "bin/git_repo_clean.ml" 99 3041 3050
+)
+"bin/git_repo_clean.ml" 101 3209 3211 "bin/git_repo_clean.ml" 101 3209 3257
+call(
+  stack
+)
+type(
+  Cmdliner.Term.info
+)
+"bin/git_repo_clean.ml" 100 3120 3122 "bin/git_repo_clean.ml" 101 3209 3257
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t *
+  Cmdliner.Term.info
+)
+"bin/git_repo_clean.ml" 99 3041 3043 "bin/git_repo_clean.ml" 101 3209 3257
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t *
+  Cmdliner.Term.info
+)
+"bin/git_repo_clean.ml" 103 3260 3264 "bin/git_repo_clean.ml" 103 3260 3266
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 103 3260 3275 "bin/git_repo_clean.ml" 103 3260 3284
+type(
+  ?help:Format.formatter ->
+  ?err:Format.formatter ->
+  ?catch:bool ->
+  ?argv:string array ->
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t *
+  Cmdliner.Term.info ->
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.result
+)
+ident(
+  ext_ref Cmdliner.Term.eval
+)
+"bin/git_repo_clean.ml" 103 3260 3285 "bin/git_repo_clean.ml" 103 3260 3288
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.t *
+  Cmdliner.Term.info
+)
+ident(
+  int_ref cmd "bin/git_repo_clean.ml" 98 3031 3035 "bin/git_repo_clean.ml" 98 3031 3038
+)
+"bin/git_repo_clean.ml" 103 3260 3275 "bin/git_repo_clean.ml" 103 3260 3288
+call(
+  stack
+)
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.result
+)
+"bin/git_repo_clean.ml" 103 3260 3301 "bin/git_repo_clean.ml" 103 3260 3302
+type(
+  [ `Exn | `Parse | `Term ]
+)
+"bin/git_repo_clean.ml" 103 3260 3294 "bin/git_repo_clean.ml" 103 3260 3302
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.result
+)
+"bin/git_repo_clean.ml" 103 3260 3306 "bin/git_repo_clean.ml" 103 3260 3319
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.print_endline
+)
+"bin/git_repo_clean.ml" 103 3260 3320 "bin/git_repo_clean.ml" 103 3260 3328
+type(
+  string
+)
+"bin/git_repo_clean.ml" 103 3260 3306 "bin/git_repo_clean.ml" 103 3260 3328
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 104 3330 3332 "bin/git_repo_clean.ml" 104 3330 3336
+type(
+  int -> unit
+)
+ident(
+  ext_ref Pervasives.exit
+)
+"bin/git_repo_clean.ml" 104 3330 3337 "bin/git_repo_clean.ml" 104 3330 3338
+type(
+  int
+)
+"bin/git_repo_clean.ml" 104 3330 3332 "bin/git_repo_clean.ml" 104 3330 3338
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 103 3260 3306 "bin/git_repo_clean.ml" 104 3330 3338
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 104 3330 3341 "bin/git_repo_clean.ml" 104 3330 3342
+type(
+  [ `Error of bool * string | `Ok of string ] Cmdliner.Term.result
+)
+"bin/git_repo_clean.ml" 104 3330 3346 "bin/git_repo_clean.ml" 104 3330 3350
+type(
+  int -> unit
+)
+ident(
+  ext_ref Pervasives.exit
+)
+"bin/git_repo_clean.ml" 104 3330 3351 "bin/git_repo_clean.ml" 104 3330 3352
+type(
+  int
+)
+"bin/git_repo_clean.ml" 104 3330 3346 "bin/git_repo_clean.ml" 104 3330 3352
+call(
+  stack
+)
+type(
+  unit
+)
+"bin/git_repo_clean.ml" 103 3260 3269 "bin/git_repo_clean.ml" 104 3330 3352
+type(
+  unit
+)
