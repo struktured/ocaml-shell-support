@@ -1,6 +1,6 @@
 (*#!/usr/bin/env ocamlscript
 Ocaml.packs :=
-  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data"]
+  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"pcre"]
  Ocaml.sources := ["shell_utils"]
 --*)
 
@@ -40,13 +40,15 @@ let buf_to_string buf =
   let _ = Buffer.blit_into buf into 0 (Buffer.length buf) in
   Bytes.to_string into
 
+let buf_size = 1024
+
 let run s = let open Infix in
-    let buf = Buffer.create 100 in
+  let buf = Buffer.create buf_size in
     read_command_output (Buffer.push_back buf) s >>|
     fun _ -> buf_to_string buf
 
 let run_exn s = let open Infix in
-    let buf = Buffer.create 100 in
+    let buf = Buffer.create buf_size in
   match read_command_output (Buffer.push_back buf) s with
   | `Ok _ -> buf_to_string buf
   | `Error (b,e) -> failwith(Printf.sprintf "error(%b): %s" b e)

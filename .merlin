@@ -1,3 +1,3 @@
-PKG csv oml csv extlib re cmdliner fileutils ocamlscript containers unix
+PKG csv oml csv extlib re cmdliner fileutils ocamlscript containers unix pcre
 SRC bin/**
 B _build/**

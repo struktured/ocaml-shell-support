@@ -5,7 +5,7 @@ Ocaml.packs :=
 
 --**)
 
-open Cmdliner 
+open Cmdliner
 open Shell_utils
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
@@ -39,6 +39,16 @@ let stop_on_error =
   Arg.(value & flag & info ["s";"s"] ~doc
          ~docv:"STOP_ON_ERROR")
 
+let dry_run =
+  let doc = "Dry run - do not actually delete any branches or tags." in
+  Arg.(value & flag & info ["d";"dry-run"] ~doc
+         ~docv:"DRY_RUN")
+
+let invert_match =
+  let doc = "Invert the matching." in
+  Arg.(value & flag & info ["v";"invert-match"] ~doc
+         ~docv:"INVERT_MATCH")
+
 open Infix
 
 let print s = Printf.printf "[git-repo-clean]: %s\n" s
@@ -54,51 +64,60 @@ let get_tags () =
   Re.split (Re_posix.compile_pat "\n")
  
 
-let delete_branch_or_tag url =
+let delete_branch_or_tag ~dry_run url =
   let cmd = Printf.sprintf "git push origin :%s" url in
-  print_endline cmd; run cmd
+  print_endline cmd;
+  if not dry_run then run cmd else `Ok url
 
-let delete_local_branch url =
+let delete_local_branch ~dry_run url =
   let cmd = Printf.sprintf "git branch -D %s" url in
   print_endline cmd; 
-  match run cmd with `Ok _ as o -> o | `Error (_, e) -> 
-    `Ok ("No local branch: " ^ url)
+  if not dry_run then match run cmd with 
+  | `Ok _ as o -> o 
+  | `Error (_, e) -> `Ok ("No local branch: " ^ url)
+  else `Ok url
 
-let delete_local_tag url =
+let delete_local_tag ~dry_run url =
   let cmd = Printf.sprintf "git tag -d %s" url in 
-  print_endline cmd;
-  match run cmd with `Ok _ as o -> o | `Error (_, e) -> 
-    `Ok ("No local tag: " ^ url)
-
+  print_endline cmd; 
+  if not dry_run then match run cmd with 
+    | `Ok _ as o -> o 
+    | `Error (_, e) -> `Ok ("No local tag: " ^ url) 
+  else `Ok url
 
 let strip_origin url =
   match Re.split (Re_posix.compile_pat "origin/") url with
   | [_;rest] -> rest 
   | _ -> url
 
-  
-let run pattern for_tags local_only remote_only stop_on_error =
+let perform_deletions ~for_tags ~local_only ~remote_only ~stop_on_error ~dry_run url = 
+  strip_origin url |> fun url ->
+        let res' = begin if not local_only then
+            match delete_branch_or_tag ~dry_run url with `Error _ as e -> if
+              stop_on_error then e else `Ok ("skipping " ^ url) | `Ok _ as o -> o else `Ok url end >>=
+          fun _ -> begin if for_tags then delete_local_tag ~dry_run url else
+            if not remote_only then delete_local_branch ~dry_run url else `Ok url end in
+      res', `Continue
+
+let run pattern for_tags local_only remote_only stop_on_error dry_run
+    invert_match =
   if local_only && remote_only then `Error (false, "both local and remote only
   does not make sense!") else
   let matches = Re.matches @@ Re_posix.compile_pat pattern in
   begin if for_tags then get_tags () else get_branches () end >>|
   CCList.fold_while (fun res url ->
-      match res with `Error _ as e -> begin print_endline "Error!";e, `Stop end
+      match res with `Error _ as e -> e, `Stop
       | `Ok _ -> begin print_endline @@ "Processing url: " ^ url;
-      match matches url with [] -> res, `Continue
-      | _ -> let url = strip_origin url in
-        let res' = begin if not local_only then
-            match delete_branch_or_tag url with `Error _ as e -> if
-              stop_on_error then e else `Ok ("skipping " ^ url) | `Ok _ as o -> o else `Ok url end >>=
-          fun _ -> begin if for_tags then delete_local_tag url else
-            if not remote_only then delete_local_branch url else `Ok url end in
-      res', `Continue end)
+      match matches url with [] -> if invert_match then perform_deletions
+            ~for_tags ~local_only ~remote_only ~stop_on_error ~dry_run url else res, `Continue
+      | _ -> if not invert_match then perform_deletions ~for_tags ~local_only ~remote_only ~stop_on_error
+               ~dry_run url else res, `Continue end)
     (`Ok "")
 
 let cmd =
   let doc = "Remove branches or gits from a git repo by regular expression" in
-  Term.(ret (pure run $ pattern $ for_tags $ local_only $ remote_only $ stop_on_error)),
+  Term.(ret (pure run $ pattern $ for_tags $ local_only 
+             $ remote_only $ stop_on_error $ dry_run $ invert_match)),
   Term.info "git_repo_clean" ~version:"1.0" ~doc 
 
-let () = match Term.eval cmd with `Error _ -> print_endline "Error!";
-  exit 1 | _ -> exit 0
+let () = match Term.eval cmd with `Error _ -> exit 1 | _ -> exit 0
