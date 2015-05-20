@@ -1,0 +1,24 @@
+opam-version: "1.2"
+name: "yj-scripts"
+version: "dev"
+author : "Carmelo Piccione carmelo.piccione@theice.com"
+maintainer: "carmelo.piccione@theice.com"
+homepage: "https://stash.intcx.net/projects/YJ/repos/yj-scripts/"
+dev-repo: "ssh://git@stash.intcx.net:7999/yj/yj-scripts.git"
+bug-reports: "https://jira.intcx.net"
+
+build: [
+  ["./configure" "--prefix=%prefix%"]
+  [make]
+]
+
+install: [
+  [make "install"]
+]
+
+remove: [
+ ["ocamlfind" "remove" "yj_scripts_common"]
+ [rm "-f" "%bin%/git_clean_repo"]
+]
+
+depends: [ "oasis" {build} "extlib" "fileutils" "re" "containers" "sequence" "gen" "cmdliner"]
