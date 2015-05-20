@@ -18,7 +18,7 @@ install: [
 
 remove: [
  ["ocamlfind" "remove" "yj_scripts_common"]
- [rm "-f" "%bin%/git_clean_repo"]
+ ["rm" "-f" "%bin%/git_clean_repo"]
 ]
 
 depends: [ "oasis" {build} "extlib" "fileutils" "re" "containers" "sequence" "gen" "cmdliner"]
