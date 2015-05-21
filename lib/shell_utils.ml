@@ -8,12 +8,13 @@ open Cmdliner
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
 
-let working_dir = 
+let working_dir exclude = 
   FilePath.dirname Sys.argv.(0) |> fun s ->
-  match Re.split (Re_posix.compile_pat scripts_dir_name) s with
+  match s with "." -> FilePath.parent_dir | _ ->
+  match Re.split (Re_posix.compile_pat exclude) s with
     h::hs -> h
   | [] -> FilePath.current_dir
-
+ 
 module Infix =
 struct
   let (>>=) x f = match x with `Error _ as e -> e | `Ok o -> f o 
