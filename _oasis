@@ -11,7 +11,7 @@ Plugins: META (0.4), DevFiles (0.4)
 Library yj_scripts
   Path:               lib
   Pack:               true
-  Modules:            Shell_utils
+  Modules:            Shell_utils, Wget
   BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data
   FindLibName:        yj_scripts
 
