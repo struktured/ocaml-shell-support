@@ -1,9 +1,9 @@
-(*#!/usr/bin/env ocamlscript
+#!/usr/bin/env ocamlscript
 Ocaml.packs :=
   ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"yj_scripts"]
 
 --
-*)
+
 open Cmdliner
 open Yj_scripts
 open Shell_utils
@@ -54,21 +54,15 @@ open Infix
 let print s = Printf.printf "[git-repo-clean]: %s\n" s
 
 let get_branches () = 
-  match 
-    let cmd = "git branch -a -r" in
-    print_endline cmd; run cmd >>|
-    Re.split (Re_posix.compile_pat "\n") 
-  with | `Ok _ as o -> o
-       | `Error e -> `Error (false, e)
+  let cmd = "git branch -a -r" in
+  print_endline cmd; run cmd >>|
+  Re.split (Re_posix.compile_pat "\n") 
 
   
 let get_tags () =
-  match 
-    let cmd = "git tag -a -r" in
-    print_endline cmd; run cmd >>|
-    Re.split (Re_posix.compile_pat "\n")
-  with | `Ok _ as o -> o
-       | `Error e -> `Error (false, e)
+  let cmd = "git tag -a -r" in
+  print_endline cmd; run cmd >>|
+  Re.split (Re_posix.compile_pat "\n")
 
 
 
@@ -82,7 +76,7 @@ let delete_local_branch ~dry_run url =
   print_endline cmd; 
   if not dry_run then match run cmd with 
   | `Ok _ as o -> o 
-  | `Error e -> `Ok ("No local branch: " ^ url)
+  | `Error _ -> `Ok ("No local branch: " ^ url)
   else `Ok url
 
 let delete_local_tag ~dry_run url =
@@ -109,7 +103,7 @@ let perform_deletions ~for_tags ~local_only ~remote_only ~stop_on_error ~dry_run
 
 let run pattern for_tags local_only remote_only stop_on_error dry_run
     invert_match =
-  if local_only && remote_only then `Error ("both local and remote only
+  if local_only && remote_only then `Error (false, "both local and remote only
   does not make sense!") else
   let matches = Re.matches @@ Re_posix.compile_pat pattern in
   begin if for_tags then get_tags () else get_branches () end >>|
