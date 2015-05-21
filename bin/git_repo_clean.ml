@@ -1,16 +1,16 @@
-#!/usr/bin/env ocamlscript
+(*#!/usr/bin/env ocamlscript
 Ocaml.packs :=
   ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"yj_scripts"]
 
 --
-
+*)
 open Cmdliner
 open Yj_scripts
 open Shell_utils
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
             
-let _ = Printf.printf "Working directory: %s\n" working_dir
+let _ = Printf.printf "Working directory: %s\n" (working_dir scripts_dir_name)
 
 let no_ssl_verify_opt = "GIT_SSL_NO_VERIFY=true"
 
@@ -53,16 +53,24 @@ open Infix
 
 let print s = Printf.printf "[git-repo-clean]: %s\n" s
 
-let get_branches () =
-  let cmd = "git branch -a -r" in
-  print_endline cmd; run cmd >>|
-  Re.split (Re_posix.compile_pat "\n")
+let get_branches () = 
+  match 
+    let cmd = "git branch -a -r" in
+    print_endline cmd; run cmd >>|
+    Re.split (Re_posix.compile_pat "\n") 
+  with | `Ok _ as o -> o
+       | `Error e -> `Error (false, e)
+
   
-let get_tags () = 
-  let cmd = "git tag -a -r" in
-  print_endline cmd; run cmd >>|
-  Re.split (Re_posix.compile_pat "\n")
- 
+let get_tags () =
+  match 
+    let cmd = "git tag -a -r" in
+    print_endline cmd; run cmd >>|
+    Re.split (Re_posix.compile_pat "\n")
+  with | `Ok _ as o -> o
+       | `Error e -> `Error (false, e)
+
+
 
 let delete_branch_or_tag ~dry_run url =
   let cmd = Printf.sprintf "git push origin :%s" url in
@@ -74,7 +82,7 @@ let delete_local_branch ~dry_run url =
   print_endline cmd; 
   if not dry_run then match run cmd with 
   | `Ok _ as o -> o 
-  | `Error (_, e) -> `Ok ("No local branch: " ^ url)
+  | `Error e -> `Ok ("No local branch: " ^ url)
   else `Ok url
 
 let delete_local_tag ~dry_run url =
@@ -82,7 +90,7 @@ let delete_local_tag ~dry_run url =
   print_endline cmd; 
   if not dry_run then match run cmd with 
     | `Ok _ as o -> o 
-    | `Error (_, e) -> `Ok ("No local tag: " ^ url) 
+    | `Error _ -> `Ok ("No local tag: " ^ url) 
   else `Ok url
 
 let strip_origin url =
@@ -101,7 +109,7 @@ let perform_deletions ~for_tags ~local_only ~remote_only ~stop_on_error ~dry_run
 
 let run pattern for_tags local_only remote_only stop_on_error dry_run
     invert_match =
-  if local_only && remote_only then `Error (false, "both local and remote only
+  if local_only && remote_only then `Error ("both local and remote only
   does not make sense!") else
   let matches = Re.matches @@ Re_posix.compile_pat pattern in
   begin if for_tags then get_tags () else get_branches () end >>|

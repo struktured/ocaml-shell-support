@@ -31,7 +31,7 @@ let read_command_output f s =
    with End_of_file -> ());
   match Unix.close_process_in ic with
     Unix.WEXITED 0 -> `Ok s
-  | Unix.WEXITED r -> `Error ("non-zero return value: " ^ string_of_int r)
+  | Unix.WEXITED r -> `Error (false, "non-zero return value: " ^ string_of_int r)
   | _ -> invalid_arg ("invalid command: " ^ s)
 
 module Buffer = CCRingBuffer.Byte
@@ -52,7 +52,7 @@ let run_exn s = let open Infix in
     let buf = Buffer.create buf_size in
   match read_command_output (Buffer.push_back buf) s with
   | `Ok _ -> buf_to_string buf
-  | `Error e -> failwith(Printf.sprintf "error: %s" e)
+  | `Error (b, e) -> failwith(Printf.sprintf "error(%b): %s" b e)
 
 let system cmd =
   match Sys.command cmd with 
