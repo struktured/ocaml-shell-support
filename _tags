@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: ef926c0fb65ac72f5ad2a613659089b8)
+# DO NOT EDIT (digest: 3b4cf389f40a5169ded727d6de322f11)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -14,26 +14,15 @@ true: annot, bin_annot
 ".git": not_hygienic
 "_darcs": -traverse
 "_darcs": not_hygienic
-# Library yj_scripts_common
-"bin/yj_scripts_common.cmxs": use_yj_scripts_common
-"bin/shell_utils.cmx": for-pack(Yj_scripts_common)
-# Executable git_clean_repo
-"bin/git_repo_clean.byte": pkg_cmdliner
-"bin/git_repo_clean.byte": pkg_containers
-"bin/git_repo_clean.byte": pkg_containers.data
-"bin/git_repo_clean.byte": pkg_extlib
-"bin/git_repo_clean.byte": pkg_fileutils
-"bin/git_repo_clean.byte": pkg_re
-"bin/git_repo_clean.byte": pkg_re.posix
-"bin/git_repo_clean.byte": pkg_unix
-"bin/git_repo_clean.byte": use_yj_scripts_common
-<bin/*.ml{,i,y}>: pkg_cmdliner
-<bin/*.ml{,i,y}>: pkg_containers
-<bin/*.ml{,i,y}>: pkg_containers.data
-<bin/*.ml{,i,y}>: pkg_extlib
-<bin/*.ml{,i,y}>: pkg_fileutils
-<bin/*.ml{,i,y}>: pkg_re
-<bin/*.ml{,i,y}>: pkg_re.posix
-<bin/*.ml{,i,y}>: pkg_unix
-<bin/*.ml{,i,y}>: use_yj_scripts_common
+# Library yj_scripts
+"lib/yj_scripts.cmxs": use_yj_scripts
+"lib/shell_utils.cmx": for-pack(Yj_scripts)
+<lib/*.ml{,i,y}>: pkg_cmdliner
+<lib/*.ml{,i,y}>: pkg_containers
+<lib/*.ml{,i,y}>: pkg_containers.data
+<lib/*.ml{,i,y}>: pkg_extlib
+<lib/*.ml{,i,y}>: pkg_fileutils
+<lib/*.ml{,i,y}>: pkg_re
+<lib/*.ml{,i,y}>: pkg_re.posix
+<lib/*.ml{,i,y}>: pkg_unix
 # OASIS_STOP

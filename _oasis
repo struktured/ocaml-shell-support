@@ -8,17 +8,11 @@ Synopsis:    Ocaml scripts, for YJ developers
 BuildTools:  ocamlbuild
 Plugins: META (0.4), DevFiles (0.4)
 
-Library yj_scripts_common
-  Path:               bin
+Library yj_scripts
+  Path:               lib
   Pack:               true
   Modules:            Shell_utils
-  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib,containers.data
-  FindLibName:        yj_scripts_common
-
-Executable git_clean_repo
-  Build: true
-  Path:               bin
-  MainIs:             git_repo_clean.ml
-  BuildDepends:       yj_scripts_common
+  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data
+  FindLibName:        yj_scripts
 
 AlphaFeatures : ocamlbuild_more_args

@@ -1,11 +1,11 @@
-(**#!/usr/bin/env ocamlscript
+#!/usr/bin/env ocamlscript
 Ocaml.packs :=
-  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers"]
- Ocaml.sources := ["shell_utils"]
+  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"yj_scripts"]
 
---**)
+--
 
 open Cmdliner
+open Yj_scripts
 open Shell_utils
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
