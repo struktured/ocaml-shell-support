@@ -1,9 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: 1618a85d4efd7f8f046524560b0f77a7)
+# DO NOT EDIT (digest: 1eda529ad0e82f2aee1fa52119ef083d)
 version = "0.1"
 description = "Ocaml scripts, for YJ developers"
 requires =
-"re unix cmdliner fileutils re.posix containers extlib containers.data tar.unix"
+"re unix cmdliner fileutils re.posix containers extlib containers.data"
 archive(byte) = "yj_scripts.cma"
 archive(byte, plugin) = "yj_scripts.cma"
 archive(native) = "yj_scripts.cmxa"
