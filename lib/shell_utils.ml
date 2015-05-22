@@ -62,5 +62,5 @@ let system cmd =
 let in_dir dir f =
   let olddir = Unix.getcwd () in
   try
-    Unix.chdir dir; f; Unix.chdir olddir
+    Unix.chdir dir; let res = f dir in Unix.chdir olddir; res
   with e -> Unix.chdir olddir;raise e 
