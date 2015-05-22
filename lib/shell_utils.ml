@@ -76,4 +76,28 @@ let editor = try Unix.getenv "EDITOR" with _ ->
   try Unix.getenv "VISUAL" with _ -> default_editor 
 
 let e to_edit = 
-    system @@ editor ^ " " ^ to_edit
+  system @@ editor ^ " " ^ to_edit
+
+let os_type =
+  let open Infix in
+  let result = begin 
+    run "uname -a" >>| String.lowercase >>| function
+  | res when
+    Re_posix.compile_pat "darwin" |>
+    fun re -> Re.execp re res -> `Darwin 
+  | res when
+    Re_posix.compile_pat "linux" |>
+    fun re -> Re.execp re res -> `Linux 
+  | res when
+    Re_posix.compile_pat "sunoS" |>
+    fun re -> Re.execp re res -> `SunOS
+  | res when
+    Re_posix.compile_pat "mingw32" |>
+    fun re -> Re.execp re res -> `MingW32
+  | res when
+    Re_posix.compile_pat "mingw64" |>
+    fun re -> Re.execp re res -> `MingW64
+  | res -> `UnknownOS 
+  end in match result with 
+  |  `Ok r -> r
+  | `Error _  -> `UnknownOS
