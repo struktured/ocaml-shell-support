@@ -58,3 +58,9 @@ let system cmd =
   match Sys.command cmd with 
   | 0 -> `Ok cmd
   | ret -> `Error (Printf.sprintf "%s: nonzero exit status: %d" cmd ret)
+
+let in_dir dir f =
+  let olddir = Unix.getcwd () in
+  try
+    Unix.chdir dir; f; Unix.chdir olddir
+  with e -> Unix.chdir olddir;raise e 
