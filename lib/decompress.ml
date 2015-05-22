@@ -13,7 +13,7 @@ let decompress_zip filename =
   Shell_utils.system @@ "unzip -o " ^ filename >>|
   fun res -> ignore(res); FilePath.chop_extension filename
 
-let decompress filename =
+let run filename =
   match FilePath.get_extension filename with
   | "gz" -> decompress_gz filename
   | "bz2" -> decompress_bz2 filename
