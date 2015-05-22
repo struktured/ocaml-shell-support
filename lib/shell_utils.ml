@@ -72,7 +72,8 @@ let cp = FileUtil.cp
 let mv = FileUtil.mv
 
 let default_editor = "vi"
+let editor = try Unix.getenv "EDITOR" with _ -> 
+  try Unix.getenv "VISUAL" with _ -> default_editor 
+
 let e to_edit = 
-  let editor_cmd = try Unix.getenv "EDITOR" with _ -> 
-    try Unix.getenv "VISUAL" with _ -> default_editor in
-  system @@ editor_cmd ^ " " ^ to_edit
+    system @@ editor ^ " " ^ to_edit
