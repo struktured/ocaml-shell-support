@@ -64,3 +64,15 @@ let in_dir dir f =
   try
     Unix.chdir dir; let res = f dir in Unix.chdir olddir; res
   with e -> Unix.chdir olddir;raise e 
+
+let ls () = system "ls"
+let pwd () = Unix.getcwd ()
+let chdir = Unix.chdir
+let cp = FileUtil.cp
+let mv = FileUtil.mv
+
+let default_editor = "vi"
+let e to_edit = 
+  let editor_cmd = try Unix.getenv "EDITOR" with _ -> 
+    try Unix.getenv "VISUAL" with _ -> default_editor in
+  system @@ editor_cmd ^ " " ^ to_edit
