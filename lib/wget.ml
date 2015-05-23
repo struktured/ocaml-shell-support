@@ -19,7 +19,7 @@ let build_command params = let open Params in
   params.url
 
 let with_params params =
-  Shell_utils.run @@ build_command params
+  Shell.run @@ build_command params
  
 let run ?no_check_certificate ?output_documents ?verbose url =
   Params.create ?no_check_certificate ?output_documents ?verbose url

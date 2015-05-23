@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: e4f02c7b6a2b7bd24ec16d4a004cadba)
+# DO NOT EDIT (digest: d24f1a22abe603f47fdd3ef6d417eec9)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -16,7 +16,7 @@ true: annot, bin_annot
 "_darcs": not_hygienic
 # Library yj_scripts
 "lib/yj_scripts.cmxs": use_yj_scripts
-"lib/shell_utils.cmx": for-pack(Yj_scripts)
+"lib/shell.cmx": for-pack(Yj_scripts)
 "lib/wget.cmx": for-pack(Yj_scripts)
 "lib/decompress.cmx": for-pack(Yj_scripts)
 <lib/*.ml{,i,y}>: pkg_cmdliner
@@ -24,7 +24,6 @@ true: annot, bin_annot
 <lib/*.ml{,i,y}>: pkg_containers.data
 <lib/*.ml{,i,y}>: pkg_extlib
 <lib/*.ml{,i,y}>: pkg_fileutils
-<lib/*.ml{,i,y}>: pkg_ppx_deriving.show
 <lib/*.ml{,i,y}>: pkg_re
 <lib/*.ml{,i,y}>: pkg_re.posix
 <lib/*.ml{,i,y}>: pkg_unix

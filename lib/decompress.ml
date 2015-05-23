@@ -18,7 +18,7 @@ end
 
 let print s = print_endline @@ Printf.sprintf "[decompress] %s" s
 
-let cmd_for filename = let open Shell_utils.Infix in
+let cmd_for filename = let open Shell.Infix in
   FilePath.get_extension filename |>
   Extension.of_string >>| function
   | `gz -> "gzip -f -d " ^ filename
@@ -40,13 +40,13 @@ let _clean_maybe ~clean filename =
     end
 
 let _decompress filename =
-  let open Shell_utils.Infix in
+  let open Shell.Infix in
   cmd_for filename >>=
-  Shell_utils.system >>|
+  Shell.system >>|
   fun res -> ignore(res); FilePath.chop_extension filename
 
 let run ?(clean=false) filename =
-  let open Shell_utils.Infix in
+  let open Shell.Infix in
   begin 
     match _clean_maybe ~clean filename with
     | `Ok _ as ok -> ok

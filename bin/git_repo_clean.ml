@@ -6,7 +6,7 @@ Ocaml.packs :=
 
 open Cmdliner
 open Yj_scripts
-open Shell_utils
+open Shell
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
             
