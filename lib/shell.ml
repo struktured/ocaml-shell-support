@@ -1,12 +1,9 @@
-(*#!/usr/bin/env ocamlscript
-Ocaml.packs :=
-  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"pcre"]
- Ocaml.sources := ["shell_utils"]
---*)
-
-open Cmdliner 
+open Cmdliner
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
+
+let opam_bin_root = try Unix.getenv "OPAM_BIN_ROOT" with _ ->
+  FilePath.concat home "local"
 
 let working_dir exclude = 
   FilePath.dirname Sys.argv.(0) |> fun s ->
