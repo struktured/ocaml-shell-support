@@ -1,9 +1,11 @@
 #!/usr/bin/env ocamlscript
+let open Ocamlscript.Std in
+begin
 Ocaml.packs :=
   ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"yj_scripts"]
-
+end
 --
-
+()
 open Cmdliner
 open Yj_scripts
 open Shell
