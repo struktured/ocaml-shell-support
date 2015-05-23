@@ -12,7 +12,7 @@ Library yj_scripts
   Path:               lib
   Pack:               true
   Modules:            Shell_utils, Wget, Decompress
-  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data
+  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data, ppx_deriving.show
   FindLibName:        yj_scripts
 
 AlphaFeatures : ocamlbuild_more_args
