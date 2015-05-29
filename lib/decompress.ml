@@ -27,7 +27,9 @@ let cmd_for filename = let open Shell.Infix in
   | `tgz -> "tar zxvf " ^ filename
 
 let _clean_maybe ~clean filename =
-  if not clean then `Ok ("skipped clean for: " ^ filename) else
+  match clean with
+  | `DoNot -> `Ok ("skipped clean for: " ^ filename)
+  | _ ->
     begin
       let chopped = FilePath.chop_extension filename in 
       try
@@ -45,7 +47,7 @@ let _decompress filename =
   Shell.system >>|
   fun res -> ignore(res); FilePath.chop_extension filename
 
-let run ?(clean=false) filename =
+let run ?(clean=`DoNot) filename =
   let open Shell.Infix in
   begin 
     match _clean_maybe ~clean filename with

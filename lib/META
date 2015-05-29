@@ -1,13 +1,13 @@
 # OASIS_START
-# DO NOT EDIT (digest: 1eda529ad0e82f2aee1fa52119ef083d)
+# DO NOT EDIT (digest: 1b8543e3d4e9f19788824774f9fa7e44)
 version = "0.1"
-description = "Ocaml scripts, for YJ developers"
+description = "Ocaml Shell Interaction Support Library"
 requires =
 "re unix cmdliner fileutils re.posix containers extlib containers.data"
-archive(byte) = "yj_scripts.cma"
-archive(byte, plugin) = "yj_scripts.cma"
-archive(native) = "yj_scripts.cmxa"
-archive(native, plugin) = "yj_scripts.cmxs"
-exists_if = "yj_scripts.cma"
+archive(byte) = "ocaml_shell_support.cma"
+archive(byte, plugin) = "ocaml_shell_support.cma"
+archive(native) = "ocaml_shell_support.cmxa"
+archive(native, plugin) = "ocaml_shell_support.cmxs"
+exists_if = "ocaml_shell_support.cma"
 # OASIS_STOP
 

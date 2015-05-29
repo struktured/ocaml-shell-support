@@ -1,18 +1,18 @@
 OASISFormat: 0.4
-Name:        yj-scripts
+Name:        ocaml-shell-support
 Version:     0.1
 License:     GPL
 LicenseFile: LICENSE.txt
 Authors:     Carmelo Piccione
-Synopsis:    Ocaml scripts, for YJ developers
+Synopsis:    Ocaml Shell Interaction Support Library
 BuildTools:  ocamlbuild
 Plugins: META (0.4), DevFiles (0.4)
 
-Library yj_scripts
+Library ocaml_shell_support
   Path:               lib
   Pack:               true
   Modules:            Shell, Wget, Decompress
   BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data
-  FindLibName:        yj_scripts
+  FindLibName:        ocaml_shell_support
 
 AlphaFeatures : ocamlbuild_more_args
