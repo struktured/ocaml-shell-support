@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 90309c6b4f6e642f6bde220d1ce89d51)
+# DO NOT EDIT (digest: 503324657dac42a298dd07367b9125b5)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -14,11 +14,11 @@ true: annot, bin_annot
 ".git": not_hygienic
 "_darcs": -traverse
 "_darcs": not_hygienic
-# Library ocaml_shell_support
-"lib/ocaml_shell_support.cmxs": use_ocaml_shell_support
-"lib/shell.cmx": for-pack(Ocaml_shell_support)
-"lib/wget.cmx": for-pack(Ocaml_shell_support)
-"lib/decompress.cmx": for-pack(Ocaml_shell_support)
+# Library shell_support
+"lib/shell_support.cmxs": use_shell_support
+"lib/shell.cmx": for-pack(Shell_support)
+"lib/wget.cmx": for-pack(Shell_support)
+"lib/decompress.cmx": for-pack(Shell_support)
 <lib/*.ml{,i,y}>: pkg_cmdliner
 <lib/*.ml{,i,y}>: pkg_containers
 <lib/*.ml{,i,y}>: pkg_containers.data
