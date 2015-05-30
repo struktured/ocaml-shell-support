@@ -11,7 +11,7 @@ Plugins: META (0.4), DevFiles (0.4)
 Library shell_support
   Path:               lib
   Pack:               true
-  Modules:            Shell, Wget, Decompress
+  Modules:            Shell, Wget, Decompress, Git
   BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data
   FindLibName:        shell_support
 

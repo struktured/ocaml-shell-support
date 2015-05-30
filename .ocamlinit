@@ -1,4 +1,4 @@
-#require "yj_scripts";;
-open Yj_scripts;;
+#require "shell_support";;
+open Shell_support;;
 open Shell;;
-print_endline "Yj scripts loaded, shell mode opened";;
+print_endline "Shel support module loaded, shell mode opened";;
