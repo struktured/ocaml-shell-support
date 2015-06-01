@@ -3,9 +3,9 @@ open Cmdliner
 let home () = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
 
-let opam_bin_root () = try Unix.getenv "OPAM_BIN_ROOT" with _ ->
+let opam_system_root () = try Unix.getenv "OPAM_SYSTEM_ROOT" with _ ->
   let ($) = FilePath.concat in
-  home() $ ".opam" $ "system" $ "bin"
+  home() $ ".opam" $ "system"
 
 let working_dir exclude =
   FilePath.dirname Sys.argv.(0) |> fun s ->
