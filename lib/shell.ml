@@ -5,7 +5,7 @@ let scripts_dir_name = "bin"
 
 let opam_system_root () = try Unix.getenv "OPAM_SYSTEM_ROOT" with _ ->
   let ($) = FilePath.concat in
-  home() $ ".opam" $ "system"
+  home() $ "local"
 
 let working_dir exclude =
   FilePath.dirname Sys.argv.(0) |> fun s ->
