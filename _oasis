@@ -12,7 +12,7 @@ Library shell_support
   Path:               lib
   Pack:               true
   Modules:            Shell, Wget, Decompress, Git
-  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data
+  BuildDepends:       re, unix, cmdliner, fileutils, re.posix, containers, extlib, containers.data, ppx_deriving.show
   FindLibName:        shell_support
 
 AlphaFeatures : ocamlbuild_more_args
