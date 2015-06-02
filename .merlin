@@ -1,4 +1,4 @@
-PKG csv oml csv extlib re cmdliner fileutils ocamlscript containers unix pcre
+PKG csv oml csv extlib re cmdliner fileutils ocamlscript containers unix
 PKG ppx_deriving ppx_deriving.show
 SRC bin/**
 B _build/**
