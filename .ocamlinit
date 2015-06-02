@@ -1,4 +1,4 @@
 #require "shell_support";;
 open Shell_support;;
 open Shell;;
-print_endline "Shel support module loaded, shell mode opened";;
+print_endline "Shell support module loaded, shell mode opened";;
