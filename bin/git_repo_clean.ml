@@ -7,7 +7,7 @@ end
 --
 ()
 open Cmdliner
-open Yj_scripts
+open Shell_support
 open Shell
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"
