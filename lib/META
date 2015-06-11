@@ -1,9 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: d974574dfa0e6fab80866e30775fb8d4)
+# DO NOT EDIT (digest: 5e731840e5e5e8efd27d57376db2fead)
 version = "0.1"
 description = "Ocaml Shell Interaction Support Library"
 requires =
-"re unix cmdliner fileutils re.posix containers extlib containers.data ppx_deriving.show"
+"re unix cmdliner fileutils re.posix containers containers.data ppx_deriving.show"
 archive(byte) = "shell_support.cma"
 archive(byte, plugin) = "shell_support.cma"
 archive(native) = "shell_support.cmxa"
