@@ -2,7 +2,7 @@
 let open Ocamlscript.Std in
 begin
 Ocaml.packs :=
-  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"yj_scripts"]
+  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"shell_support"]
 end
 --
 ()
