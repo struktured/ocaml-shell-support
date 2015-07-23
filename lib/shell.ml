@@ -100,3 +100,20 @@ let os_type =
   end in match result with
   |  `Ok r -> r
   | `Error _  -> `UnknownOS
+
+let lines_of_chan chan = 
+  let lines = ref [] in
+  try
+    while true; do
+      lines := input_line chan :: !lines
+     done; !lines
+  with End_of_file ->
+    List.rev !lines
+
+let lines_of_file filename =
+  let lines = ref [] in
+  let chan = open_in filename in
+  try
+    lines := lines_of_chan chan;!lines
+  with End_of_file -> close_in chan; !lines
+
