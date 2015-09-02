@@ -2,12 +2,12 @@
 let open Ocamlscript.Std in
 begin
 Ocaml.packs :=
-  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"yj_scripts"]
+  ["extlib";"re";"unix";"cmdliner";"fileutils";"re.posix";"containers";"containers.data";"shell_support"]
 end
 --
 ()
 open Cmdliner
-open Yj_scripts
+open Shell_support
 open Shell
 let home = Unix.getenv "HOME"
 let scripts_dir_name = "bin"

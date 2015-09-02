@@ -20,4 +20,4 @@ remove: [
  ["ocamlfind" "remove" "shell_support"]
 ]
 
-depends: [ "oasis" {build} "extlib" "fileutils" "re" "containers" "sequence" "gen" "cmdliner"]
+depends: [ "oasis" {build} "fileutils" "re" "containers" "sequence" "gen" "cmdliner" "ppx_deriving"]
