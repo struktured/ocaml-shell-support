@@ -101,7 +101,7 @@ let os_type =
   |  `Ok r -> r
   | `Error _  -> `UnknownOS
 
-let lines_of_chan chan = 
+let lines_of_chan chan =
   let lines = ref [] in
   try
     while true; do
@@ -117,3 +117,7 @@ let lines_of_file filename =
     lines := lines_of_chan chan;!lines
   with End_of_file -> close_in chan; !lines
 
+let mkdir ?(raise_if_exists=false) dir = try
+    Unix.mkdir dir 0o750 
+  with Unix.Unix_error (Unix.EEXIST, _, _) as e ->
+    if raise_if_exists then raise e else ()
